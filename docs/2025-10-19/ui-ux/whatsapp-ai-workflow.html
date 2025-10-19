@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp & AI-Assisted Dialog Workflow</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #2563eb;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+
+        h1 { font-size: 2.5em; margin-bottom: 30px; }
+        h2 { font-size: 2em; margin-top: 40px; }
+        h3 { font-size: 1.5em; margin-top: 30px; }
+
+        .info {
+            background: #e0f2fe;
+            border-left: 4px solid #0891b2;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .success {
+            background: #d1fae5;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .nav {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .mermaid {
+            text-align: center;
+            margin: 30px 0;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .phase-description {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .phase-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            background: #f9fafb;
+        }
+
+        .phase-card-title {
+            font-weight: bold;
+            color: #1f2937;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .phase-1 { border-left: 4px solid #8b5cf6; }
+        .phase-2 { border-left: 4px solid #3b82f6; }
+        .phase-3 { border-left: 4px solid #10b981; }
+        .phase-4 { border-left: 4px solid #f59e0b; }
+        .phase-5 { border-left: 4px solid #ef4444; }
+        .phase-6 { border-left: 4px solid #6366f1; }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .benefit-item {
+            background: #f0fdf4;
+            border-left: 3px solid #10b981;
+            padding: 15px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .benefit-title {
+            font-weight: bold;
+            color: #047857;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="../index.html">← Documentação</a></li>
+            <li><a href="#overview">Visão Geral</a></li>
+            <li><a href="#diagram">Diagrama</a></li>
+            <li><a href="#phases">Fases</a></li>
+            <li><a href="#benefits">Benefícios</a></li>
+        </ul>
+    </nav>
+
+    <h1>WhatsApp & AI-Assisted Dialog Workflow</h1>
+
+    <div class="success">
+        <strong>🎯 Interface Prioritária da Plataforma</strong><br>
+        Este workflow descreve a interface primária da plataforma: <strong>WhatsApp com diálogo assistido por IA</strong>. Esta abordagem prioriza interações conversacionais em vez de UI web tradicional, tornando a plataforma acessível e intuitiva para todos os usuários.
+    </div>
+
+    <h2 id="overview">📱 Visão Geral</h2>
+
+    <p>A plataforma utiliza WhatsApp como canal principal de comunicação, com um Agente de IA mediando todas as interações entre contratantes e desenvolvedores. Este modelo traz diversos benefícios em relação a interfaces web tradicionais.</p>
+
+    <div class="info">
+        <strong>🔑 Princípios Fundamentais:</strong>
+        <ul>
+            <li><strong>WhatsApp como Interface Principal:</strong> Usuários (especialmente contratantes) interagem principalmente via WhatsApp</li>
+            <li><strong>Comunicação Mediada por IA:</strong> O agente de IA estrutura, formata e facilita toda a comunicação</li>
+            <li><strong>Processamento de Linguagem Natural:</strong> Usuários se comunicam naturalmente sem aprender padrões complexos de UI</li>
+            <li><strong>Gerenciamento Automatizado de Workflow:</strong> A IA cuida de transições de estado, notificações e coordenação</li>
+        </ul>
+    </div>
+
+    <h2 id="diagram">📊 Diagrama de Sequência Completo</h2>
+
+    <div class="warning">
+        <strong>⚠️ Observação Importante:</strong><br>
+        Este diagrama representa o fluxo completo do projeto, da criação inicial até a finalização. Cada fase é coordenada pelo Agente de IA através do WhatsApp, garantindo comunicação clara e rastreável.
+    </div>
+
+    <pre class="mermaid">
+sequenceDiagram
+    participant C as Contratante
+    participant AI as Agente de IA
+    participant D as Desenvolvedor
+    participant S as Stripe
+
+    Note over C,AI: FASE 1 - CRIAÇÃO DO PEDIDO
+    C->>AI: Envia WhatsApp + Descrição do Projeto
+    AI->>AI: Processa e estrutura informações
+    AI->>C: Confirma recebimento e explica processo
+    AI->>D: Notifica sobre novo pedido disponível
+
+    Note over AI,D: FASE 2 - PROPOSTAS DOS DEVS
+    D->>AI: Solicita lista de pedidos disponíveis
+    AI->>D: Envia resumo dos pedidos
+    D->>AI: Envia proposta (valor, MVP, cronograma)
+    AI->>AI: Estrutura proposta para apresentação
+    AI->>C: Envia proposta formatada via WhatsApp
+
+    Note over C,AI: FASE 3 - NEGOCIAÇÃO E ACEITE
+    C->>AI: Pergunta sobre proposta ou negocia
+    AI->>D: Encaminha dúvidas/negociação
+    D->>AI: Responde com ajustes na proposta
+    AI->>C: Apresenta contraproposta
+    C->>AI: "ACEITO proposta X"
+
+    Note over AI,S: FASE 4 - FORMALIZAÇÃO
+    AI->>D: Notifica aceite e solicita detalhes finais
+    AI->>S: Cria link de pagamento inicial
+    AI->>C: Envia link Stripe para pagamento
+    C->>S: Realiza pagamento
+    S->>AI: Confirma pagamento
+    AI->>D: Notifica pagamento confirmado - Iniciar desenvolvimento
+
+    Note over D,AI: FASE 5 - CICLO DE DESENVOLVIMENTO
+    loop Entregas Parciais
+        D->>AI: Notifica entrega parcial
+        AI->>AI: Prepara instruções de validação
+        AI->>C: Notifica entrega + instruções de teste
+        C->>AI: Feedback (Aceito/Correções)
+        alt Correções necessárias
+            AI->>D: Encaminha feedback para ajustes
+        else Aceito
+            AI->>S: Gera link pagamento parcela
+            AI->>C: Envia link pagamento
+            C->>S: Realiza pagamento
+            S->>AI: Confirma pagamento
+            AI->>D: Notifica pagamento confirmado
+        end
+    end
+
+    Note over AI,C: FASE 6 - FINALIZAÇÃO
+    D->>AI: Solicita aprovação final
+    AI->>C: Envia relatório final + instruções validação
+    C->>AI: "APROVO FINAL" ou "CANCELAR"
+    alt Aprovação Final
+        AI->>S: Gera link pagamento final
+        AI->>C: Envia link pagamento final
+        C->>S: Realiza pagamento final
+        S->>AI: Confirma pagamento final
+        AI->>D: Notifica conclusão e pagamento
+        AI->>C: Agradece e encerra projeto
+    else Cancelamento
+        AI->>D: Notifica cancelamento
+        AI->>C: Processa encerramento com feedback
+    end
+</pre>
+
+    <h2 id="phases">🔄 Fases Detalhadas do Workflow</h2>
+
+    <h3>Fase 1: Criação do Pedido</h3>
+
+    <div class="phase-description">
+        <div class="phase-card phase-1">
+            <div class="phase-card-title">1. Contratante envia mensagem</div>
+            <p>O contratante envia uma mensagem no WhatsApp descrevendo o projeto que deseja desenvolver.</p>
+        </div>
+
+        <div class="phase-card phase-1">
+            <div class="phase-card-title">2. IA processa informações</div>
+            <p>O agente de IA analisa, estrutura e organiza as informações do projeto usando NLU (Natural Language Understanding).</p>
+        </div>
+
+        <div class="phase-card phase-1">
+            <div class="phase-card-title">3. Confirmação e notificação</div>
+            <p>A IA confirma o recebimento ao contratante, explica o processo e notifica desenvolvedores sobre o novo pedido.</p>
+        </div>
+    </div>
+
+    <h3>Fase 2: Propostas dos Desenvolvedores</h3>
+
+    <div class="phase-description">
+        <div class="phase-card phase-2">
+            <div class="phase-card-title">1. Desenvolvedor consulta pedidos</div>
+            <p>Desenvolvedores solicitam à IA a lista de pedidos disponíveis que correspondem ao seu perfil.</p>
+        </div>
+
+        <div class="phase-card phase-2">
+            <div class="phase-card-title">2. IA envia resumos</div>
+            <p>A IA envia resumos estruturados dos projetos, destacando requisitos principais e características.</p>
+        </div>
+
+        <div class="phase-card phase-2">
+            <div class="phase-card-title">3. Envio de proposta</div>
+            <p>Desenvolvedor envia proposta com valor, escopo do MVP e cronograma. A IA formata e apresenta ao contratante.</p>
+        </div>
+    </div>
+
+    <h3>Fase 3: Negociação e Aceite</h3>
+
+    <div class="phase-description">
+        <div class="phase-card phase-3">
+            <div class="phase-card-title">1. Perguntas e negociação</div>
+            <p>Contratante faz perguntas sobre a proposta ou negocia termos via WhatsApp.</p>
+        </div>
+
+        <div class="phase-card phase-3">
+            <div class="phase-card-title">2. Mediação da IA</div>
+            <p>A IA encaminha dúvidas ao desenvolvedor e retorna respostas formatadas ao contratante.</p>
+        </div>
+
+        <div class="phase-card phase-3">
+            <div class="phase-card-title">3. Aceite formal</div>
+            <p>Contratante aceita a proposta com comando simples: "ACEITO proposta X".</p>
+        </div>
+    </div>
+
+    <h3>Fase 4: Formalização</h3>
+
+    <div class="phase-description">
+        <div class="phase-card phase-4">
+            <div class="phase-card-title">1. Notificação de aceite</div>
+            <p>IA notifica o desenvolvedor sobre o aceite e solicita detalhes finais para início do projeto.</p>
+        </div>
+
+        <div class="phase-card phase-4">
+            <div class="phase-card-title">2. Geração de pagamento</div>
+            <p>IA cria link de pagamento inicial via Stripe e envia ao contratante pelo WhatsApp.</p>
+        </div>
+
+        <div class="phase-card phase-4">
+            <div class="phase-card-title">3. Confirmação e início</div>
+            <p>Após confirmação do pagamento pelo Stripe, a IA autoriza o desenvolvedor a iniciar o trabalho.</p>
+        </div>
+    </div>
+
+    <h3>Fase 5: Ciclo de Desenvolvimento</h3>
+
+    <div class="phase-description">
+        <div class="phase-card phase-5">
+            <div class="phase-card-title">1. Entregas parciais</div>
+            <p>Desenvolvedor notifica a IA sobre cada entrega parcial do projeto.</p>
+        </div>
+
+        <div class="phase-card phase-5">
+            <div class="phase-card-title">2. Validação do contratante</div>
+            <p>IA prepara instruções de teste e envia ao contratante para validação da entrega.</p>
+        </div>
+
+        <div class="phase-card phase-5">
+            <div class="phase-card-title">3. Feedback loop</div>
+            <p>Se aprovado: pagamento da parcela. Se correções necessárias: retorno ao desenvolvedor.</p>
+        </div>
+    </div>
+
+    <h3>Fase 6: Finalização</h3>
+
+    <div class="phase-description">
+        <div class="phase-card phase-6">
+            <div class="phase-card-title">1. Solicitação de aprovação final</div>
+            <p>Desenvolvedor solicita aprovação final do projeto à IA.</p>
+        </div>
+
+        <div class="phase-card phase-6">
+            <div class="phase-card-title">2. Relatório final</div>
+            <p>IA envia relatório completo e instruções de validação final ao contratante.</p>
+        </div>
+
+        <div class="phase-card phase-6">
+            <div class="phase-card-title">3. Conclusão ou cancelamento</div>
+            <p><strong>Aprovação:</strong> Pagamento final e encerramento com sucesso<br>
+               <strong>Cancelamento:</strong> Processo de encerramento com feedback</p>
+        </div>
+    </div>
+
+    <h2 id="benefits">✨ Benefícios desta Abordagem</h2>
+
+    <div class="benefits">
+        <div class="benefit-item">
+            <div class="benefit-title">📱 Barreira de Entrada Baixa</div>
+            Não é necessário aprender uma interface web complexa. Todos sabem usar WhatsApp.
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-title">🕐 Disponibilidade 24/7</div>
+            WhatsApp está sempre disponível em dispositivos móveis, permitindo interações a qualquer momento.
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-title">💬 Interações Naturais</div>
+            Interface conversacional parece intuitiva e familiar para todos os usuários.
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-title">🤖 Coordenação Automatizada</div>
+            IA cuida de agendamento, lembretes e gerenciamento de estado automaticamente.
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-title">📋 Comunicação Estruturada</div>
+            IA garante que todas as informações necessárias sejam coletadas de forma organizada.
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-title">🌍 Suporte Multi-idioma</div>
+            IA pode traduzir e localizar conversas em tempo real.
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-title">📊 Rastreamento Completo</div>
+            Todas as interações ficam registradas no histórico do WhatsApp.
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-title">⚡ Notificações Instantâneas</div>
+            Usuários recebem atualizações em tempo real sobre o status do projeto.
+        </div>
+    </div>
+
+    <h2>🔧 Considerações de Implementação</h2>
+
+    <div class="info">
+        <strong>Tecnologias e Integrações Necessárias:</strong>
+        <ul>
+            <li><strong>WhatsApp Business API:</strong> Para comunicação em escala com usuários</li>
+            <li><strong>NLU (Natural Language Understanding):</strong> Para reconhecimento de intenções e extração de entidades</li>
+            <li><strong>Gerenciamento de Contexto:</strong> Para conversas multi-turno e manutenção de estado</li>
+            <li><strong>Stripe API:</strong> Para geração de links de pagamento e webhooks de confirmação</li>
+            <li><strong>Sistema de Notificações:</strong> Para alertar desenvolvedores sobre novos pedidos e atualizações</li>
+            <li><strong>Máquina de Estados:</strong> Para controlar as fases do workflow de forma robusta</li>
+            <li><strong>Trilha de Auditoria:</strong> Para registrar e armazenar todas as interações</li>
+            <li><strong>Sistema de Templates:</strong> Para formatação consistente de mensagens</li>
+        </ul>
+    </div>
+
+    <h2>📄 Arquivos Relacionados</h2>
+
+    <div class="info">
+        <ul>
+            <li><strong>whatsapp-ai-workflow.mermaid</strong> - Código fonte do diagrama Mermaid</li>
+            <li><strong>whatsapp-ai-workflow.md</strong> - Documentação em Markdown</li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            sequence: {
+                useMaxWidth: true,
+                wrap: true,
+                diagramMarginX: 50,
+                diagramMarginY: 10,
+                actorMargin: 50,
+                width: 150,
+                height: 65,
+                boxMargin: 10,
+                boxTextMargin: 5,
+                noteMargin: 10,
+                messageMargin: 35,
+                mirrorActors: true
+            }
+        });
+    </script>
+</body>
+</html>

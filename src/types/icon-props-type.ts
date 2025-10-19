@@ -1,3 +1,3 @@
 export type Icon = {
-  style?: React.CSSProperties;
+	style?: React.CSSProperties;
 };

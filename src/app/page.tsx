@@ -10,11 +10,11 @@ import MobileFAB from "@/components/mobile-fab/mobile-fab";
 import { Globe } from "lucide-react";
 
 export default async function LandingPage() {
-  return (
-    <>
-      <LandingPageHeader />
-      <main className="min-h-screen pt-16">
-        {/* <MobileFAB
+	return (
+		<>
+			<LandingPageHeader />
+			<main className="min-h-screen pt-16">
+				{/* <MobileFAB
           icon={
             <Globe
               style={{ color: "var(--color-primary" }}
@@ -23,14 +23,14 @@ export default async function LandingPage() {
           }
           ariaLabel={"Selecionar Línguagem"}
         /> */}
-        <LandingPageHero />
-        <LandingPageStats />
-        <LandingPageFeatures />
-        <LandingPageHowItWorks />
-        <LandingPageFAQ />
-        <LandingPageCTA />
-      </main>
-      <LandingPageFooter />
-    </>
-  );
+				<LandingPageHero />
+				<LandingPageStats />
+				<LandingPageFeatures />
+				<LandingPageHowItWorks />
+				<LandingPageFAQ />
+				<LandingPageCTA />
+			</main>
+			<LandingPageFooter />
+		</>
+	);
 }

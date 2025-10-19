@@ -14,35 +14,35 @@ import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { Globe } from "lucide-react";
 
 export default async function LandingPage() {
-  const { dict } = await useDict();
+	const { dict } = await useDict();
 
-  return (
-    <>
-      <CheckSessionAndRedirect />
-      <SignedIn>
-        <LoadingScreen />
-      </SignedIn>
-      <SignedOut>
-        <LandingPageHeader />
-        <main className="min-h-screen pt-16">
-          <MobileFAB
-            icon={
-              <Globe
-                style={{ color: "var(--color-primary" }}
-                className="h-8 w-8"
-              />
-            }
-            ariaLabel={"Selecionar Línguagem"}
-          />
-          <LandingPageHero />
-          <LandingPageStats />
-          <LandingPageFeatures />
-          <LandingPageHowItWorks />
-          <LandingPageFAQ />
-          <LandingPageCTA />
-        </main>
-        <LandingPageFooter />
-      </SignedOut>
-    </>
-  );
+	return (
+		<>
+			<CheckSessionAndRedirect />
+			<SignedIn>
+				<LoadingScreen />
+			</SignedIn>
+			<SignedOut>
+				<LandingPageHeader />
+				<main className="min-h-screen pt-16">
+					<MobileFAB
+						icon={
+							<Globe
+								style={{ color: "var(--color-primary" }}
+								className="h-8 w-8"
+							/>
+						}
+						ariaLabel={"Selecionar Línguagem"}
+					/>
+					<LandingPageHero />
+					<LandingPageStats />
+					<LandingPageFeatures />
+					<LandingPageHowItWorks />
+					<LandingPageFAQ />
+					<LandingPageCTA />
+				</main>
+				<LandingPageFooter />
+			</SignedOut>
+		</>
+	);
 }

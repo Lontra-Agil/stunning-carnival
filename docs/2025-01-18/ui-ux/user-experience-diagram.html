@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Experience Flow - Platform Overview</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #2563eb;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+
+        h1 { font-size: 2.5em; margin-bottom: 30px; }
+        h2 { font-size: 2em; margin-top: 40px; }
+        h3 { font-size: 1.5em; margin-top: 30px; }
+
+        .info {
+            background: #e0f2fe;
+            border-left: 4px solid #0891b2;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .nav {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .mermaid {
+            text-align: center;
+            margin: 30px 0;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .flow-description {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .flow-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            background: #f9fafb;
+        }
+
+        .flow-card-title {
+            font-weight: bold;
+            color: #1f2937;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .flow-public { border-left: 4px solid #01579b; }
+        .flow-auth { border-left: 4px solid #4a148c; }
+        .flow-contractor { border-left: 4px solid #1b5e20; }
+        .flow-developer { border-left: 4px solid #e65100; }
+        .flow-action { border-left: 4px solid #b71c1c; }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="../index.html">← Documentation</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#diagram">Flow Diagram</a></li>
+            <li><a href="#flows">User Flows</a></li>
+        </ul>
+    </nav>
+
+    <h1>User Experience Flow - Platform Overview</h1>
+
+    <p>This diagram illustrates the complete user journey through the platform, showing how contractors and developers interact with the system, from landing page through authentication to their respective workflows.</p>
+
+    <h2 id="overview">🎯 Platform Overview</h2>
+
+    <div class="info">
+        <strong>📋 Key Platform Features:</strong>
+        <ul>
+            <li><strong>Dual User Roles:</strong> Contractors (hiring) and Developers (being hired)</li>
+            <li><strong>OAuth Authentication:</strong> Google and Apple sign-in support</li>
+            <li><strong>GitHub Integration:</strong> Automatic repository analytics and metrics</li>
+            <li><strong>Talent Marketplace:</strong> Browse and filter developers and organizations</li>
+            <li><strong>Payment Integration:</strong> Stripe checkout for contracts</li>
+        </ul>
+    </div>
+
+    <h3>Color Legend</h3>
+
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #e1f5fe; border-color: #01579b;"></div>
+            <span><strong>Public Pages</strong> - Accessible without authentication</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #f3e5f5; border-color: #4a148c;"></div>
+            <span><strong>Authentication</strong> - Sign up and login flow</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #e8f5e8; border-color: #1b5e20;"></div>
+            <span><strong>Contractor Flow</strong> - Hiring and browsing developers</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #fff3e0; border-color: #e65100;"></div>
+            <span><strong>Developer Flow</strong> - Profile and repository management</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #ffebee; border-color: #b71c1c;"></div>
+            <span><strong>Action Pages</strong> - Critical actions (hiring, payment)</span>
+        </div>
+    </div>
+
+    <h2 id="diagram">📊 Complete User Experience Flow</h2>
+
+    <pre class="mermaid">
+flowchart TD
+    classDef publicPage fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef authPage fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef contractorPage fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef developerPage fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef actionPage fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    classDef externalService fill:#f5f5f5,stroke:#616161,stroke-width:2px
+
+    A[Landing / Home Page] --> B[Public Blog]
+    A --> C[Terms of Service]
+    A --> D[Privacy Policy]
+
+    A --> E[Sign Up / Login]
+    E --> E1{Authentication Provider}
+    E1 -->|Google OAuth| E2[Authenticate User]
+    E1 -->|Apple OAuth| E2
+
+    E2 --> F{User Role?}
+
+    subgraph G [Contractor Flow]
+        direction TB
+        F -->|Contractor| G1[Talent Marketplace]
+        G1 --> G2[Browse & Filter:<br/>Developers & Organizations]
+        G2 --> G3[View Profile & Metrics]
+
+        G3 --> G4[Inspect Repository Analytics]
+        G4 --> G5[Code Quality Metrics]
+        G4 --> G6[Project Performance Metrics]
+        G4 --> G7[Activity Trends]
+
+        G5 --> G8[Initiate Hire]
+        G6 --> G8
+        G7 --> G8
+
+        G8 --> G9{ Hire Type? }
+        G9 -->|Developer| G10[Individual Contract]
+        G9 -->|Organization| G11[Team Contract]
+        G10 --> G12[Stripe Checkout]
+        G11 --> G12
+        G12 --> G13[Payment Success]
+    end
+
+    subgraph H [Developer Flow]
+        direction TB
+        F -->|Developer| H1[Developer Dashboard]
+        H1 --> H2[Connect GitHub Account]
+        H2 --> H3[Fetch Unified Repository List<br/>Personal + Organizations]
+
+        H3 --> H4[Repository Visibility Control]
+        H4 --> H5[Toggle Repository Visibility]
+        H4 --> H6[Auto-discover Linked Projects]
+        H4 --> H7[Calculate Combined Metrics]
+
+        H5 --> H8[Public Profile Updated]
+        H6 --> H8
+        H7 --> H8
+    end
+
+    %% Apply colors
+    class A,B,C,D publicPage
+    class E,E1,E2,F authPage
+    class G1,G2,G3,G4,G5,G6,G7 contractorPage
+    class H1,H2,H3,H4,H5,H6,H7,H8 developerPage
+    class G8,G9,G10,G11,G12,G13 actionPage
+</pre>
+
+    <h2 id="flows">🔄 Detailed User Flows</h2>
+
+    <h3>Public Pages Flow</h3>
+
+    <div class="flow-description">
+        <div class="flow-card flow-public">
+            <div class="flow-card-title">Landing / Home Page</div>
+            <p>Entry point for all users. Showcases platform features and value proposition.</p>
+        </div>
+
+        <div class="flow-card flow-public">
+            <div class="flow-card-title">Public Blog</div>
+            <p>Content marketing, tutorials, and platform updates accessible to everyone.</p>
+        </div>
+
+        <div class="flow-card flow-public">
+            <div class="flow-card-title">Terms of Service & Privacy Policy</div>
+            <p>Legal documentation and privacy information for transparency and compliance.</p>
+        </div>
+    </div>
+
+    <h3>Authentication Flow</h3>
+
+    <div class="flow-description">
+        <div class="flow-card flow-auth">
+            <div class="flow-card-title">Sign Up / Login</div>
+            <p>Unified authentication entry point supporting multiple OAuth providers.</p>
+        </div>
+
+        <div class="flow-card flow-auth">
+            <div class="flow-card-title">OAuth Providers</div>
+            <p><strong>Google OAuth:</strong> Sign in with Google account<br>
+               <strong>Apple OAuth:</strong> Sign in with Apple ID</p>
+        </div>
+
+        <div class="flow-card flow-auth">
+            <div class="flow-card-title">Role Detection</div>
+            <p>System determines user role (Contractor or Developer) and routes to appropriate dashboard.</p>
+        </div>
+    </div>
+
+    <h3>Contractor Flow (Hiring Path)</h3>
+
+    <div class="flow-description">
+        <div class="flow-card flow-contractor">
+            <div class="flow-card-title">1. Talent Marketplace</div>
+            <p>Browse available developers and organizations with advanced filtering options.</p>
+        </div>
+
+        <div class="flow-card flow-contractor">
+            <div class="flow-card-title">2. Profile & Metrics</div>
+            <p>View detailed developer profiles including repository analytics and performance metrics.</p>
+        </div>
+
+        <div class="flow-card flow-contractor">
+            <div class="flow-card-title">3. Repository Analytics</div>
+            <p><strong>Code Quality:</strong> Code review scores, best practices adherence<br>
+               <strong>Performance:</strong> Commit frequency, merge success rate<br>
+               <strong>Activity:</strong> Contribution trends, project engagement</p>
+        </div>
+
+        <div class="flow-card flow-action">
+            <div class="flow-card-title">4. Initiate Hire</div>
+            <p>Choose between individual developer contracts or team/organization contracts.</p>
+        </div>
+
+        <div class="flow-card flow-action">
+            <div class="flow-card-title">5. Payment Processing</div>
+            <p>Secure Stripe checkout integration for contract payments.</p>
+        </div>
+    </div>
+
+    <h3>Developer Flow (Profile Management Path)</h3>
+
+    <div class="flow-description">
+        <div class="flow-card flow-developer">
+            <div class="flow-card-title">1. Developer Dashboard</div>
+            <p>Central hub for managing profile, repositories, and visibility settings.</p>
+        </div>
+
+        <div class="flow-card flow-developer">
+            <div class="flow-card-title">2. GitHub Integration</div>
+            <p>Connect GitHub account to automatically import repositories and organizations.</p>
+        </div>
+
+        <div class="flow-card flow-developer">
+            <div class="flow-card-title">3. Unified Repository List</div>
+            <p>Fetch all repositories from personal account and associated organizations in one view.</p>
+        </div>
+
+        <div class="flow-card flow-developer">
+            <div class="flow-card-title">4. Visibility Control</div>
+            <p><strong>Toggle Visibility:</strong> Choose which repos appear on public profile<br>
+               <strong>Auto-discovery:</strong> System automatically links related projects<br>
+               <strong>Metrics:</strong> Combined analytics across all visible repositories</p>
+        </div>
+
+        <div class="flow-card flow-developer">
+            <div class="flow-card-title">5. Public Profile</div>
+            <p>Updated profile visible to contractors in the talent marketplace.</p>
+        </div>
+    </div>
+
+    <h2>🔑 Key Features</h2>
+
+    <div class="info">
+        <strong>Platform Highlights:</strong>
+        <ul>
+            <li><strong>Seamless Authentication:</strong> OAuth integration with major providers</li>
+            <li><strong>GitHub Deep Integration:</strong> Automatic repository analysis and metrics calculation</li>
+            <li><strong>Flexible Visibility:</strong> Developers control what information is publicly visible</li>
+            <li><strong>Comprehensive Analytics:</strong> Code quality, performance, and activity metrics</li>
+            <li><strong>Dual Contract Types:</strong> Support for individual and team/organization hiring</li>
+            <li><strong>Secure Payments:</strong> Industry-standard Stripe integration</li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html>

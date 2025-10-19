@@ -2,161 +2,159 @@
 @import "tw-animate-css";
 
 @theme inline {
-  --font-quicksand: "Quicksand";
-  --font-sans: var(--font-quicksand), "Quicksand", sans-serif;
-  /* Burgundy / Wine scale built around 600 = #4D2626 */
-  --color-wine-50: #EDE9E9;
-  --color-wine-100: #DBD4D4;
-  --color-wine-200: #CABEBE;
-  --color-wine-300: #AF9D9D;
-  --color-wine-400: #947D7D;
-  --color-wine-500: #715151;
-  --color-wine-500-rgb: 113, 81, 81;
-  --color-wine-500-a50: hsla(0deg, 16.5%, 38%, 0.5);
-  --color-wine-600: #4D2626;
-  /* base */
-  --color-wine-700: #412020;
-  --color-wine-800: #361B1B;
-  --color-wine-900: #261313;
+	--font-quicksand: "Quicksand";
+	--font-sans: var(--font-quicksand), "Quicksand", sans-serif;
+	/* Burgundy / Wine scale built around 600 = #4D2626 */
+	--color-wine-50: #ede9e9;
+	--color-wine-100: #dbd4d4;
+	--color-wine-200: #cabebe;
+	--color-wine-300: #af9d9d;
+	--color-wine-400: #947d7d;
+	--color-wine-500: #715151;
+	--color-wine-500-rgb: 113, 81, 81;
+	--color-wine-500-a50: hsla(0deg, 16.5%, 38%, 0.5);
+	--color-wine-600: #4d2626;
+	/* base */
+	--color-wine-700: #412020;
+	--color-wine-800: #361b1b;
+	--color-wine-900: #261313;
 
-  /* Alpha versions of the base (600) like in your example */
-  --color-wine-50a: #4D262633;
-  /* ~20% opacity */
-  --color-wine-100a: #4D26264D;
-  /* ~30% opacity */
+	/* Alpha versions of the base (600) like in your example */
+	--color-wine-50a: #4d262633;
+	/* ~20% opacity */
+	--color-wine-100a: #4d26264d;
+	/* ~30% opacity */
 
-  --color-background: 0 0% 100%;
-  --color-foreground: 0 0% 3.9%;
-  --color-card: #a2a2a2;
-  --color-card-foreground: 0 0% 3.9%;
-  --color-popover: 0 0% 100%;
-  --color-popover-foreground: 0 0% 3.9%;
-  --color-primary: 0 0% 9%;
-  --color-primary-foreground: 0 0% 98%;
-  --color-secondary: 0 0% 96.1%;
-  --color-secondary-foreground: 0 0% 9%;
-  --color-muted: 0 0% 96.1%;
-  --color-muted-foreground: 2 17% 42%;
-  --color-accent: 0 0% 96.1%;
-  --color-accent-foreground: 0 0% 9%;
-  --color-destructive: 0 84.2% 60.2%;
-  --color-destructive-foreground: 0 0% 98%;
-  --color-border: 0 0% 89.8%;
-  --color-input: 0 0% 89.8%;
-  --color-ring: 0 0% 3.9%;
-  --color-chart-1: 12 76% 61%;
-  --color-chart-2: 173 58% 39%;
-  --color-chart-3: 197 37% 24%;
-  --color-chart-4: 43 74% 66%;
-  --color-chart-5: 27 87% 67%;
-  --radius: 0.5rem;
+	--color-background: 0 0% 100%;
+	--color-foreground: 0 0% 3.9%;
+	--color-card: #a2a2a2;
+	--color-card-foreground: 0 0% 3.9%;
+	--color-popover: 0 0% 100%;
+	--color-popover-foreground: 0 0% 3.9%;
+	--color-primary: 0 0% 9%;
+	--color-primary-foreground: 0 0% 98%;
+	--color-secondary: 0 0% 96.1%;
+	--color-secondary-foreground: 0 0% 9%;
+	--color-muted: 0 0% 96.1%;
+	--color-muted-foreground: 2 17% 42%;
+	--color-accent: 0 0% 96.1%;
+	--color-accent-foreground: 0 0% 9%;
+	--color-destructive: 0 84.2% 60.2%;
+	--color-destructive-foreground: 0 0% 98%;
+	--color-border: 0 0% 89.8%;
+	--color-input: 0 0% 89.8%;
+	--color-ring: 0 0% 3.9%;
+	--color-chart-1: 12 76% 61%;
+	--color-chart-2: 173 58% 39%;
+	--color-chart-3: 197 37% 24%;
+	--color-chart-4: 43 74% 66%;
+	--color-chart-5: 27 87% 67%;
+	--radius: 0.5rem;
 }
 
-
 @layer theme {
-  [data-theme="landing-page"] & {
-    @theme {
-      --font-quicksand: "Quicksand";
-      --font-sans: var(--font-quicksand), "Quicksand", sans-serif;
-      /* Cores personalizadas baseadas no esquema fornecido */
-      --color-wine-dark: #3b0f0f;
-      --color-rose-light: #bda09d;
-      --color-almost-black: #1a1a1a;
-      --color-brown-rose: #7e5b5a;
-      --color-neutral-gray: #a2a2a2;
-      --color-wine-medium: #4d2626;
-      --color-warm-intermediate: #9c7876;
+	[data-theme="landing-page"] & {
+		@theme {
+			--font-quicksand: "Quicksand";
+			--font-sans: var(--font-quicksand), "Quicksand", sans-serif;
+			/* Cores personalizadas baseadas no esquema fornecido */
+			--color-wine-dark: #3b0f0f;
+			--color-rose-light: #bda09d;
+			--color-almost-black: #1a1a1a;
+			--color-brown-rose: #7e5b5a;
+			--color-neutral-gray: #a2a2a2;
+			--color-wine-medium: #4d2626;
+			--color-warm-intermediate: #9c7876;
 
-      /* Design tokens */
-      --color-background: #bda09d;
-      --color-foreground: #1a1a1a;
-      --color-card: #ffffff;
-      --color-card-foreground: #1a1a1a;
-      --color-popover: #ffffff;
-      --color-popover-foreground: #1a1a1a;
-      --color-primary: #3b0f0f;
-      --color-primary-foreground: #ffffff;
-      --color-secondary: #7e5b5a;
-      --color-secondary-foreground: #ffffff;
-      --color-muted: #bda09d;
-      --color-muted-foreground: #a2a2a2;
-      --color-accent: #4d2626;
-      --color-accent-foreground: #ffffff;
-      --color-destructive: oklch(0.577 0.245 27.325);
-      --color-destructive-foreground: #ffffff;
-      --color-border: #7e5b5a;
-      --color-input: #ffffff;
-      --color-ring: #9c7876;
-      --color-chart-1: #3b0f0f;
-      --color-chart-2: #4d2626;
-      --color-chart-3: #7e5b5a;
-      --color-chart-4: #9c7876;
-      --color-chart-5: #bda09d;
-      --color-radius: 0.75rem;
-      --color-sidebar: oklch(1 0 0);
-      --color-sidebar-foreground: oklch(0.145 0 0);
-      --color-sidebar-primary: oklch(0.205 0 0);
-      --color-sidebar-primary-foreground: oklch(0.985 0 0);
-      --color-sidebar-accent: oklch(0.97 0 0);
-      --color-sidebar-accent-foreground: oklch(0.205 0 0);
-      --color-sidebar-border: oklch(0.922 0 0);
-      --color-sidebar-ring: oklch(0.708 0 0);
-    }
-  }
+			/* Design tokens */
+			--color-background: #bda09d;
+			--color-foreground: #1a1a1a;
+			--color-card: #ffffff;
+			--color-card-foreground: #1a1a1a;
+			--color-popover: #ffffff;
+			--color-popover-foreground: #1a1a1a;
+			--color-primary: #3b0f0f;
+			--color-primary-foreground: #ffffff;
+			--color-secondary: #7e5b5a;
+			--color-secondary-foreground: #ffffff;
+			--color-muted: #bda09d;
+			--color-muted-foreground: #a2a2a2;
+			--color-accent: #4d2626;
+			--color-accent-foreground: #ffffff;
+			--color-destructive: oklch(0.577 0.245 27.325);
+			--color-destructive-foreground: #ffffff;
+			--color-border: #7e5b5a;
+			--color-input: #ffffff;
+			--color-ring: #9c7876;
+			--color-chart-1: #3b0f0f;
+			--color-chart-2: #4d2626;
+			--color-chart-3: #7e5b5a;
+			--color-chart-4: #9c7876;
+			--color-chart-5: #bda09d;
+			--color-radius: 0.75rem;
+			--color-sidebar: oklch(1 0 0);
+			--color-sidebar-foreground: oklch(0.145 0 0);
+			--color-sidebar-primary: oklch(0.205 0 0);
+			--color-sidebar-primary-foreground: oklch(0.985 0 0);
+			--color-sidebar-accent: oklch(0.97 0 0);
+			--color-sidebar-accent-foreground: oklch(0.205 0 0);
+			--color-sidebar-border: oklch(0.922 0 0);
+			--color-sidebar-ring: oklch(0.708 0 0);
+		}
+	}
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+	* {
+		@apply border-border;
+	}
 
-  body {
-    @apply bg-background text-foreground;
-  }
+	body {
+		@apply bg-background text-foreground;
+	}
 }
 
 html,
 body {
-  background-color: #BDA09D;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  font-size: 16px;
-  color: #1A1A1A;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto;
+	background-color: #bda09d;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-size: 16px;
+	color: #1a1a1a;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-decoration-skip: ink;
+	text-decoration-skip-ink: auto;
 }
 
 * {
-  scrollbar-width: thin;
-  box-sizing: border-box;
-  text-wrap: pretty;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smooth: always;
+	scrollbar-width: thin;
+	box-sizing: border-box;
+	text-wrap: pretty;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-    box-shadow: 0 0 0px 1000px white inset;
-    -webkit-text-fill-color: #2d333a;
-  }
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		-webkit-box-shadow: 0 0 0px 1000px white inset;
+		box-shadow: 0 0 0px 1000px white inset;
+		-webkit-text-fill-color: #2d333a;
+	}
 }
 
 /*Global media*/
 svg {
-  flex-shrink: 0;
+	flex-shrink: 0;
 }
 
 /*Global typography*/
 
 p {
-  line-height: 1.5em;
+	line-height: 1.5em;
 }
 
 h1,
@@ -165,14 +163,14 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.25;
-  font-weight: 500;
-  color: var(--gray-900);
+	line-height: 1.25;
+	font-weight: 500;
+	color: var(--gray-900);
 }
 
 h3 {
-  font-size: 20px;
-  line-height: 28px;
+	font-size: 20px;
+	line-height: 28px;
 }
 
 h1,
@@ -181,9 +179,9 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.25;
-  font-weight: 500;
-  color: var(--gray-900);
+	line-height: 1.25;
+	font-weight: 500;
+	color: var(--gray-900);
 }
 
 h1:first-child,
@@ -192,48 +190,48 @@ h3:first-child,
 h4:first-child,
 h5:first-child,
 h6:first-child {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 /*Global external*/
 .Toastify__toast-container {
-  width: fit-content;
+	width: fit-content;
 }
 
 .caption {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  color: var(--gray-600);
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--gray-600);
 }
 
 /* Ensure the input does not resize or change on autocomplete hover */
 input {
-  box-sizing: border-box;
-  /* Maintain consistent sizing */
-  overflow: hidden;
-  /* Prevent content from spilling */
+	box-sizing: border-box;
+	/* Maintain consistent sizing */
+	overflow: hidden;
+	/* Prevent content from spilling */
 }
 
 /* Prevent hover or focus from altering the input size */
 input:focus,
 input:hover,
 input:-webkit-autofill {
-  box-shadow: none;
-  /* Remove any shadow effects */
+	box-shadow: none;
+	/* Remove any shadow effects */
 }
 
 /* Targeting autocomplete dropdown suggestions */
 input:-webkit-autofill {
-  box-shadow: none !important;
-  transition: background-color 5000s ease-in-out 0s;
-  /* Prevent flashing */
+	box-shadow: none !important;
+	transition: background-color 5000s ease-in-out 0s;
+	/* Prevent flashing */
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-  /* Set background to white */
-  -webkit-text-fill-color: #000;
-  /* Set text color to black */
-  transition: background-color 5000s ease-in-out 0s;
+	-webkit-box-shadow: 0 0 0px 1000px #fff inset;
+	/* Set background to white */
+	-webkit-text-fill-color: #000;
+	/* Set text color to black */
+	transition: background-color 5000s ease-in-out 0s;
 }

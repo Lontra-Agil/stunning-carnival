@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Guide - Design System</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #2563eb;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+        }
+
+        h1 { font-size: 2.5em; margin-bottom: 30px; }
+        h2 { font-size: 2em; margin-top: 40px; }
+        h3 { font-size: 1.5em; margin-top: 30px; }
+
+        .color-swatch {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .color-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            background: #f9fafb;
+        }
+
+        .color-title {
+            font-weight: bold;
+            color: #1f2937;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .code {
+            background: #f3f4f6;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .info {
+            background: #e0f2fe;
+            border-left: 4px solid #0891b2;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .nav {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #f9fafb;
+            font-weight: 600;
+        }
+
+        code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="../index.html">← Documentation</a></li>
+            <li><a href="#palette">Palette Analysis</a></li>
+            <li><a href="#application">Application Guide</a></li>
+            <li><a href="#contrast">Contrast & Accessibility</a></li>
+            <li><a href="#tokens">CSS Tokens</a></li>
+        </ul>
+    </nav>
+
+    <h1>Color Palette Guide</h1>
+
+    <p>This guide explains how to apply a harmonious earth-tone color palette to the web application, maintaining consistency and readability across the interface.</p>
+
+    <h2 id="palette">🎨 Palette Analysis</h2>
+
+    <p>The palette contains warm, earthy tones that create an analogous and monochromatic harmony, ideal for elegant and sophisticated interfaces.</p>
+
+    <div class="color-grid">
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: #3B0F0F;"></div>
+            <div class="color-title">#3B0F0F</div>
+            <p><strong>Dark Wine</strong> - Primary color for important actions and headings</p>
+        </div>
+
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: #BDA09D;"></div>
+            <div class="color-title">#BDA09D</div>
+            <p><strong>Light Rose</strong> - Soft backgrounds and subtle sections</p>
+        </div>
+
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: #1A1A1A;"></div>
+            <div class="color-title">#1A1A1A</div>
+            <p><strong>Near Black</strong> - Main text color for maximum readability</p>
+        </div>
+
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: #7E5B5A;"></div>
+            <div class="color-title">#7E5B5A</div>
+            <p><strong>Medium Rose Brown</strong> - Borders, hover states, secondary buttons</p>
+        </div>
+
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: #A2A2A2;"></div>
+            <div class="color-title">#A2A2A2</div>
+            <p><strong>Neutral Gray</strong> - Placeholders, dividers, disabled states</p>
+        </div>
+
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: #4D2626;"></div>
+            <div class="color-title">#4D2626</div>
+            <p><strong>Medium Wine</strong> - Primary buttons and focus states</p>
+        </div>
+
+        <div class="color-card">
+            <div class="color-swatch" style="background-color: #9C7876;"></div>
+            <div class="color-title">#9C7876</div>
+            <p><strong>Warm Intermediate</strong> - Subtle highlights and accents</p>
+        </div>
+    </div>
+
+    <h2 id="application">🧱 Application Structure</h2>
+
+    <p>Recommended color application by UI function:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Function</th>
+                <th>Suggested Color</th>
+                <th>CSS Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Main page background</td>
+                <td>#BDA09D</td>
+                <td><code>background-color: #BDA09D;</code></td>
+            </tr>
+            <tr>
+                <td>Cards and modals</td>
+                <td>#F5F3F3 or #E9E5E5</td>
+                <td><code>background-color: #E9E5E5;</code></td>
+            </tr>
+            <tr>
+                <td>Main text (titles, labels)</td>
+                <td>#1A1A1A</td>
+                <td><code>color: #1A1A1A;</code></td>
+            </tr>
+            <tr>
+                <td>Secondary text (descriptions, placeholders)</td>
+                <td>#7E5B5A</td>
+                <td><code>color: #7E5B5A;</code></td>
+            </tr>
+            <tr>
+                <td>Borders and dividers</td>
+                <td>#A2A2A2</td>
+                <td><code>border-color: #A2A2A2;</code></td>
+            </tr>
+            <tr>
+                <td>Primary button ("Create")</td>
+                <td>#4D2626 with white text</td>
+                <td><code>background-color: #4D2626; color: #fff;</code></td>
+            </tr>
+            <tr>
+                <td>Primary button hover</td>
+                <td>#3B0F0F</td>
+                <td><code>background-color: #3B0F0F;</code></td>
+            </tr>
+            <tr>
+                <td>Secondary button ("Cancel")</td>
+                <td>Border #7E5B5A, text #7E5B5A</td>
+                <td><code>border: 1px solid #7E5B5A; color: #7E5B5A;</code></td>
+            </tr>
+            <tr>
+                <td>Links and highlights</td>
+                <td>#9C7876</td>
+                <td><code>color: #9C7876;</code></td>
+            </tr>
+            <tr>
+                <td>Active checkbox or switch</td>
+                <td>#4D2626</td>
+                <td><code>background-color: #4D2626;</code></td>
+            </tr>
+            <tr>
+                <td>Focus outline</td>
+                <td>#9C7876 with transparency</td>
+                <td><code>outline: rgba(156,120,118,0.5);</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="contrast">🌗 Contrast Modes (Accessibility)</h2>
+
+    <div class="info">
+        <strong>Important Accessibility Guidelines:</strong>
+        <ul>
+            <li>Avoid dark background + dark text (e.g., #3B0F0F on #7E5B5A)</li>
+            <li>For small text, maintain minimum contrast of 4.5:1 — use #1A1A1A or white (#FFFFFF) depending on background</li>
+            <li>For large text (18pt+), minimum contrast of 3:1 is acceptable</li>
+        </ul>
+    </div>
+
+    <h3>Dark Mode Suggestion</h3>
+
+    <p>For a dark mode variant, invert the color roles:</p>
+
+    <ul>
+        <li><strong>Background:</strong> #1A1A1A</li>
+        <li><strong>Buttons:</strong> #7E5B5A</li>
+        <li><strong>Text:</strong> #E9E5E5</li>
+        <li><strong>Accents:</strong> #9C7876</li>
+    </ul>
+
+    <h2 id="tokens">✨ CSS Tokens / Tailwind Configuration</h2>
+
+    <h3>CSS Variables</h3>
+
+    <div class="code">:root {
+  --color-bg: #BDA09D;
+  --color-surface: #E9E5E5;
+  --color-text: #1A1A1A;
+  --color-text-secondary: #7E5B5A;
+  --color-border: #A2A2A2;
+  --color-primary: #4D2626;
+  --color-primary-dark: #3B0F0F;
+  --color-accent: #9C7876;
+}</div>
+
+    <h3>Tailwind Configuration</h3>
+
+    <div class="code">theme: {
+  extend: {
+    colors: {
+      primary: '#4D2626',
+      'primary-dark': '#3B0F0F',
+      accent: '#9C7876',
+      surface: '#E9E5E5',
+      text: '#1A1A1A',
+      'text-secondary': '#7E5B5A',
+      border: '#A2A2A2',
+      background: '#BDA09D',
+    },
+  },
+}</div>
+
+    <h3>Usage Examples</h3>
+
+    <div class="code">/* Using CSS Variables */
+.card {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.button-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Using Tailwind */
+&lt;div class="bg-surface text-text border border-border"&gt;
+  &lt;button class="bg-primary hover:bg-primary-dark text-white"&gt;
+    Click me
+  &lt;/button&gt;
+&lt;/div&gt;</div>
+
+</body>
+</html>

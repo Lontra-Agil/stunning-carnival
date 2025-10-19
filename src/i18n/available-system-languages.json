@@ -1,242 +1,242 @@
 [
-    {
-        "language_code": "en-US",
-        "language_name": "English (US)",
-        "region_name": "United States"
-    },
-    {
-        "language_code": "en-GB",
-        "language_name": "English (UK)",
-        "region_name": "United Kingdom"
-    },
-    {
-        "language_code": "en-CA",
-        "language_name": "English (Canada)",
-        "region_name": "Canada"
-    },
-    {
-        "language_code": "en-AU",
-        "language_name": "English (Australia)",
-        "region_name": "Australia"
-    },
-    {
-        "language_code": "pt-BR",
-        "language_name": "Portuguese (Brazilian)",
-        "region_name": "Brazil"
-    },
-    {
-        "language_code": "es-ES",
-        "language_name": "Spanish (Spain)",
-        "region_name": "Spain"
-    },
-    {
-        "language_code": "es-MX",
-        "language_name": "Spanish (Mexican)",
-        "region_name": "Mexico"
-    },
-    {
-        "language_code": "es-AR",
-        "language_name": "Spanish (Argentinian)",
-        "region_name": "Argentina"
-    },
-    {
-        "language_code": "es-CO",
-        "language_name": "Spanish (Colombian)",
-        "region_name": "Colombia"
-    },
-    {
-        "language_code": "fr-FR",
-        "language_name": "French (France)",
-        "region_name": "France"
-    },
-    {
-        "language_code": "fr-CA",
-        "language_name": "French (Canadian)",
-        "region_name": "Canada (Quebec)"
-    },
-    {
-        "language_code": "de-DE",
-        "language_name": "German",
-        "region_name": "Germany"
-    },
-    {
-        "language_code": "it-IT",
-        "language_name": "Italian",
-        "region_name": "Italy"
-    },
-    {
-        "language_code": "nl-NL",
-        "language_name": "Dutch",
-        "region_name": "Netherlands"
-    },
-    {
-        "language_code": "sv-SE",
-        "language_name": "Swedish",
-        "region_name": "Sweden"
-    },
-    {
-        "language_code": "no-NO",
-        "language_name": "Norwegian",
-        "region_name": "Norway"
-    },
-    {
-        "language_code": "da-DK",
-        "language_name": "Danish",
-        "region_name": "Denmark"
-    },
-    {
-        "language_code": "fi-FI",
-        "language_name": "Finnish",
-        "region_name": "Finland"
-    },
-    {
-        "language_code": "pl-PL",
-        "language_name": "Polish",
-        "region_name": "Poland"
-    },
-    {
-        "language_code": "cs-CZ",
-        "language_name": "Czech",
-        "region_name": "Czech Republic"
-    },
-    {
-        "language_code": "hu-HU",
-        "language_name": "Hungarian",
-        "region_name": "Hungary"
-    },
-    {
-        "language_code": "ro-RO",
-        "language_name": "Romanian",
-        "region_name": "Romania"
-    },
-    {
-        "language_code": "el-GR",
-        "language_name": "Greek",
-        "region_name": "Greece"
-    },
-    {
-        "language_code": "tr-TR",
-        "language_name": "Turkish",
-        "region_name": "Turkey"
-    },
-    {
-        "language_code": "ru-RU",
-        "language_name": "Russian",
-        "region_name": "Russia"
-    },
-    {
-        "language_code": "uk-UA",
-        "language_name": "Ukrainian",
-        "region_name": "Ukraine"
-    },
-    {
-        "language_code": "ar-SA",
-        "language_name": "Arabic (Saudi Arabia)",
-        "region_name": "Saudi Arabia"
-    },
-    {
-        "language_code": "ar-AE",
-        "language_name": "Arabic (UAE)",
-        "region_name": "United Arab Emirates"
-    },
-    {
-        "language_code": "ar-EG",
-        "language_name": "Arabic (Egypt)",
-        "region_name": "Egypt"
-    },
-    {
-        "language_code": "he-IL",
-        "language_name": "Hebrew",
-        "region_name": "Israel"
-    },
-    {
-        "language_code": "fa-IR",
-        "language_name": "Persian (Farsi)",
-        "region_name": "Iran"
-    },
-    {
-        "language_code": "ur-PK",
-        "language_name": "Urdu",
-        "region_name": "Pakistan"
-    },
-    {
-        "language_code": "hi-IN",
-        "language_name": "Hindi",
-        "region_name": "India"
-    },
-    {
-        "language_code": "bn-BD",
-        "language_name": "Bengali",
-        "region_name": "Bangladesh"
-    },
-    {
-        "language_code": "ta-IN",
-        "language_name": "Tamil",
-        "region_name": "India (Tamil Nadu)"
-    },
-    {
-        "language_code": "id-ID",
-        "language_name": "Indonesian",
-        "region_name": "Indonesia"
-    },
-    {
-        "language_code": "ms-MY",
-        "language_name": "Malay",
-        "region_name": "Malaysia"
-    },
-    {
-        "language_code": "th-TH",
-        "language_name": "Thai",
-        "region_name": "Thailand"
-    },
-    {
-        "language_code": "vi-VN",
-        "language_name": "Vietnamese",
-        "region_name": "Vietnam"
-    },
-    {
-        "language_code": "zh-CN",
-        "language_name": "Chinese (Simplified)",
-        "region_name": "China"
-    },
-    {
-        "language_code": "zh-TW",
-        "language_name": "Chinese (Traditional)",
-        "region_name": "Taiwan"
-    },
-    {
-        "language_code": "zh-HK",
-        "language_name": "Chinese (Hong Kong)",
-        "region_name": "Hong Kong"
-    },
-    {
-        "language_code": "ja-JP",
-        "language_name": "Japanese",
-        "region_name": "Japan"
-    },
-    {
-        "language_code": "ko-KR",
-        "language_name": "Korean",
-        "region_name": "South Korea"
-    },
-    {
-        "language_code": "af-ZA",
-        "language_name": "Afrikaans",
-        "region_name": "South Africa"
-    },
-    {
-        "language_code": "sw-KE",
-        "language_name": "Swahili (Kenya)",
-        "region_name": "Kenya"
-    },
-    {
-        "language_code": "sw-TZ",
-        "language_name": "Swahili (Tanzania)",
-        "region_name": "Tanzania"
-    },
-    {
-        "language_code": "en-NG",
-        "language_name": "English (Nigeria)",
-        "region_name": "Nigeria"
-    }
+	{
+		"language_code": "en-US",
+		"language_name": "English (US)",
+		"region_name": "United States"
+	},
+	{
+		"language_code": "en-GB",
+		"language_name": "English (UK)",
+		"region_name": "United Kingdom"
+	},
+	{
+		"language_code": "en-CA",
+		"language_name": "English (Canada)",
+		"region_name": "Canada"
+	},
+	{
+		"language_code": "en-AU",
+		"language_name": "English (Australia)",
+		"region_name": "Australia"
+	},
+	{
+		"language_code": "pt-BR",
+		"language_name": "Portuguese (Brazilian)",
+		"region_name": "Brazil"
+	},
+	{
+		"language_code": "es-ES",
+		"language_name": "Spanish (Spain)",
+		"region_name": "Spain"
+	},
+	{
+		"language_code": "es-MX",
+		"language_name": "Spanish (Mexican)",
+		"region_name": "Mexico"
+	},
+	{
+		"language_code": "es-AR",
+		"language_name": "Spanish (Argentinian)",
+		"region_name": "Argentina"
+	},
+	{
+		"language_code": "es-CO",
+		"language_name": "Spanish (Colombian)",
+		"region_name": "Colombia"
+	},
+	{
+		"language_code": "fr-FR",
+		"language_name": "French (France)",
+		"region_name": "France"
+	},
+	{
+		"language_code": "fr-CA",
+		"language_name": "French (Canadian)",
+		"region_name": "Canada (Quebec)"
+	},
+	{
+		"language_code": "de-DE",
+		"language_name": "German",
+		"region_name": "Germany"
+	},
+	{
+		"language_code": "it-IT",
+		"language_name": "Italian",
+		"region_name": "Italy"
+	},
+	{
+		"language_code": "nl-NL",
+		"language_name": "Dutch",
+		"region_name": "Netherlands"
+	},
+	{
+		"language_code": "sv-SE",
+		"language_name": "Swedish",
+		"region_name": "Sweden"
+	},
+	{
+		"language_code": "no-NO",
+		"language_name": "Norwegian",
+		"region_name": "Norway"
+	},
+	{
+		"language_code": "da-DK",
+		"language_name": "Danish",
+		"region_name": "Denmark"
+	},
+	{
+		"language_code": "fi-FI",
+		"language_name": "Finnish",
+		"region_name": "Finland"
+	},
+	{
+		"language_code": "pl-PL",
+		"language_name": "Polish",
+		"region_name": "Poland"
+	},
+	{
+		"language_code": "cs-CZ",
+		"language_name": "Czech",
+		"region_name": "Czech Republic"
+	},
+	{
+		"language_code": "hu-HU",
+		"language_name": "Hungarian",
+		"region_name": "Hungary"
+	},
+	{
+		"language_code": "ro-RO",
+		"language_name": "Romanian",
+		"region_name": "Romania"
+	},
+	{
+		"language_code": "el-GR",
+		"language_name": "Greek",
+		"region_name": "Greece"
+	},
+	{
+		"language_code": "tr-TR",
+		"language_name": "Turkish",
+		"region_name": "Turkey"
+	},
+	{
+		"language_code": "ru-RU",
+		"language_name": "Russian",
+		"region_name": "Russia"
+	},
+	{
+		"language_code": "uk-UA",
+		"language_name": "Ukrainian",
+		"region_name": "Ukraine"
+	},
+	{
+		"language_code": "ar-SA",
+		"language_name": "Arabic (Saudi Arabia)",
+		"region_name": "Saudi Arabia"
+	},
+	{
+		"language_code": "ar-AE",
+		"language_name": "Arabic (UAE)",
+		"region_name": "United Arab Emirates"
+	},
+	{
+		"language_code": "ar-EG",
+		"language_name": "Arabic (Egypt)",
+		"region_name": "Egypt"
+	},
+	{
+		"language_code": "he-IL",
+		"language_name": "Hebrew",
+		"region_name": "Israel"
+	},
+	{
+		"language_code": "fa-IR",
+		"language_name": "Persian (Farsi)",
+		"region_name": "Iran"
+	},
+	{
+		"language_code": "ur-PK",
+		"language_name": "Urdu",
+		"region_name": "Pakistan"
+	},
+	{
+		"language_code": "hi-IN",
+		"language_name": "Hindi",
+		"region_name": "India"
+	},
+	{
+		"language_code": "bn-BD",
+		"language_name": "Bengali",
+		"region_name": "Bangladesh"
+	},
+	{
+		"language_code": "ta-IN",
+		"language_name": "Tamil",
+		"region_name": "India (Tamil Nadu)"
+	},
+	{
+		"language_code": "id-ID",
+		"language_name": "Indonesian",
+		"region_name": "Indonesia"
+	},
+	{
+		"language_code": "ms-MY",
+		"language_name": "Malay",
+		"region_name": "Malaysia"
+	},
+	{
+		"language_code": "th-TH",
+		"language_name": "Thai",
+		"region_name": "Thailand"
+	},
+	{
+		"language_code": "vi-VN",
+		"language_name": "Vietnamese",
+		"region_name": "Vietnam"
+	},
+	{
+		"language_code": "zh-CN",
+		"language_name": "Chinese (Simplified)",
+		"region_name": "China"
+	},
+	{
+		"language_code": "zh-TW",
+		"language_name": "Chinese (Traditional)",
+		"region_name": "Taiwan"
+	},
+	{
+		"language_code": "zh-HK",
+		"language_name": "Chinese (Hong Kong)",
+		"region_name": "Hong Kong"
+	},
+	{
+		"language_code": "ja-JP",
+		"language_name": "Japanese",
+		"region_name": "Japan"
+	},
+	{
+		"language_code": "ko-KR",
+		"language_name": "Korean",
+		"region_name": "South Korea"
+	},
+	{
+		"language_code": "af-ZA",
+		"language_name": "Afrikaans",
+		"region_name": "South Africa"
+	},
+	{
+		"language_code": "sw-KE",
+		"language_name": "Swahili (Kenya)",
+		"region_name": "Kenya"
+	},
+	{
+		"language_code": "sw-TZ",
+		"language_name": "Swahili (Tanzania)",
+		"region_name": "Tanzania"
+	},
+	{
+		"language_code": "en-NG",
+		"language_name": "English (Nigeria)",
+		"region_name": "Nigeria"
+	}
 ]

@@ -1,14 +1,17 @@
-import { useEffect } from "react";
+import { type DependencyList, useEffect } from "react";
 import { useFirstRender } from "./use-first-render";
 
-function useEffectExcludingFirstRender(effect: any, deps: Array<any>) {
-  const firstRender = useFirstRender();
+function useEffectExcludingFirstRender(
+	effect: () => void,
+	deps: DependencyList,
+) {
+	const firstRender = useFirstRender();
 
-  useEffect(() => {
-    if (!firstRender) {
-      effect();
-    }
-  }, deps);
+	useEffect(() => {
+		if (!firstRender) {
+			effect();
+		}
+	}, [firstRender, effect, ...deps]);
 }
 
 export { useEffectExcludingFirstRender };

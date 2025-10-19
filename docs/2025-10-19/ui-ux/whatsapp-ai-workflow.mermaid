@@ -1,0 +1,66 @@
+sequenceDiagram
+    participant C as Contratante
+    participant AI as Agente de IA
+    participant D as Desenvolvedor
+    participant S as Stripe
+
+    Note over C,AI: FASE 1 - CRIAÇÃO DO PEDIDO
+    C->>AI: Envia WhatsApp + Descrição do Projeto
+    AI->>AI: Processa e estrutura informações
+    AI->>C: Confirma recebimento e explica processo
+    AI->>D: Notifica sobre novo pedido disponível
+
+    Note over AI,D: FASE 2 - PROPOSTAS DOS DEVS
+    D->>AI: Solicita lista de pedidos disponíveis
+    AI->>D: Envia resumo dos pedidos
+    D->>AI: Envia proposta (valor, MVP, cronograma)
+    AI->>AI: Estrutura proposta para apresentação
+    AI->>C: Envia proposta formatada via WhatsApp
+
+    Note over C,AI: FASE 3 - NEGOCIAÇÃO E ACEITE
+    C->>AI: Pergunta sobre proposta ou negocia
+    AI->>D: Encaminha dúvidas/negociação
+    D->>AI: Responde com ajustes na proposta
+    AI->>C: Apresenta contraproposta
+    C->>AI: "ACEITO proposta X"
+
+    Note over AI,S: FASE 4 - FORMALIZAÇÃO
+    AI->>D: Notifica aceite e solicita detalhes finais
+    AI->>S: Cria link de pagamento inicial
+    AI->>C: Envia link Stripe para pagamento
+    C->>S: Realiza pagamento
+    S->>AI: Confirma pagamento
+    AI->>D: Notifica pagamento confirmado - Iniciar desenvolvimento
+
+    Note over D,AI: FASE 5 - CICLO DE DESENVOLVIMENTO
+    loop Entregas Parciais
+        D->>AI: Notifica entrega parcial
+        AI->>AI: Prepara instruções de validação
+        AI->>C: Notifica entrega + instruções de teste
+        C->>AI: Feedback (Aceito/Correções)
+        alt Correções necessárias
+            AI->>D: Encaminha feedback para ajustes
+        else Aceito
+            AI->>S: Gera link pagamento parcela
+            AI->>C: Envia link pagamento
+            C->>S: Realiza pagamento
+            S->>AI: Confirma pagamento
+            AI->>D: Notifica pagamento confirmado
+        end
+    end
+
+    Note over AI,C: FASE 6 - FINALIZAÇÃO
+    D->>AI: Solicita aprovação final
+    AI->>C: Envia relatório final + instruções validação
+    C->>AI: "APROVO FINAL" ou "CANCELAR"
+    alt Aprovação Final
+        AI->>S: Gera link pagamento final
+        AI->>C: Envia link pagamento final
+        C->>S: Realiza pagamento final
+        S->>AI: Confirma pagamento final
+        AI->>D: Notifica conclusão e pagamento
+        AI->>C: Agradece e encerra projeto
+    else Cancelamento
+        AI->>D: Notifica cancelamento
+        AI->>C: Processa encerramento com feedback
+    end
