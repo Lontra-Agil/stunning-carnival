@@ -1,0 +1,32 @@
+:root {
+  --gray-0: #fff;
+  --gray-25: #fcfcfd;
+  --gray-50: #f7f7f8;
+  --gray-75: #f2f2f5;
+  --gray-100: #ececf1;
+  --gray-100-a50: hsla(240deg, 17%, 94%, 0.5);
+  --gray-150: #e3e3eb;
+  --gray-200: #d9d9e3;
+  --gray-200-a50: hsla(240deg, 20%, 87%, 0.5);
+  --gray-250: #d1d1dc;
+  --gray-300: #c5c5d2;
+  --gray-300-a50: hsla(240deg, 16%, 80%, 0.5);
+  --gray-350: #b8b8cb;
+  --gray-400: #acacbe;
+  --gray-400-a50: hsla(240deg, 12%, 71%, 0.5);
+  --gray-450: #9d9dae;
+  --gray-500: #8e8ea0;
+  --gray-550: #7e7e90;
+  --gray-600: #6e6e80;
+  --gray-650: #5f5f75;
+  --gray-700: #565869;
+  --gray-750: #46464d;
+  --gray-800: #353740;
+  --gray-850: #282832;
+  --gray-900: #202123;
+  --gray-950: #101014;
+  --gray-1000: #000;
+  --gray-10a: rgba(0, 0, 0, 0.1);
+  --gray-15a: rgba(0, 0, 0, 0.15);
+  --gray-20a: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,215 @@
+.ld.ld-spin {
+  animation: ld-spin 1s infinite linear;
+}
+
+.ld {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  width: 1em;
+  height: 1em;
+  margin: -0.5em;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s;
+  transition-timing-function: ease-in;
+  opacity: 1;
+  z-index: auto;
+  visibility: visible;
+  animation-play-state: running !important;
+}
+
+.ld-ring::after {
+  content: " ";
+  display: block;
+  width: 2em;
+  height: 2em;
+  box-sizing: border-box;
+  transform-origin: 0 0;
+  transform: translateZ(0) scale(0.5);
+  backface-visibility: hidden;
+  border-radius: 50%;
+  border: 0.3em solid currentColor;
+  border-left-color: transparent;
+}
+
+@keyframes ld-spin {
+  0% {
+    animation-timing-function: cubic-bezier(0.5856, 0.0703, 0.4143, 0.9297);
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  height: 28px;
+  width: 28px;
+  border-radius: 100%;
+  padding: 0 !important;
+  color: #202123 !important;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-property: background-color, box-shadow;
+}
+
+.icon-button:hover {
+  background-color: var(--gray-150);
+}
+
+.icon-button.danger:hover {
+  background-color: var(--red-50);
+}
+
+.filled-button:active {
+  transform: scale(0.98);
+}
+
+.filled-button {
+  color: #f2eceb;
+}
+
+.filled-button:focus {
+  outline: none;
+}
+
+.filled-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 6px;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  transition-property: opacity, background-color, transform, box-shadow,
+    border-color;
+  will-change: transform;
+}
+
+.filled-button::before {
+  background: #4D2626;
+  opacity: 1;
+}
+
+.filled-button:hover::before {
+  background: #3B0F0F;
+}
+
+/*secondary*/
+
+.filled-button.secondary {
+  color: var(--gray-800);
+}
+
+.filled-button.secondary:focus {
+  outline: none;
+}
+
+.filled-button.secondary::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 6px;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  transition-property: opacity, background-color, transform, box-shadow,
+    border-color;
+  will-change: transform;
+}
+
+.filled-button.secondary::before {
+  background-color: var(--gray-100);
+  opacity: 1;
+}
+
+.filled-button.secondary:hover::before {
+  background-color: var(--gray-150);
+}
+
+/*danger*/
+
+.filled-button.danger {
+  color: #f7f7f8;
+}
+
+.filled-button.danger:focus {
+  outline: none;
+}
+
+.filled-button.danger::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 6px;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  transition-property: opacity, background-color, transform, box-shadow,
+    border-color;
+  will-change: transform;
+}
+
+.filled-button.danger::before {
+  background-color: var(--red-500);
+  opacity: 1;
+}
+
+.filled-button.danger:hover::before {
+  background-color: var(--red-400);
+}
+
+/*transparent*/
+
+.filled-button.transparent {
+  color: var(--color-wine-900);
+}
+
+.filled-button.transparent:focus {
+  outline: none;
+}
+
+.filled-button.transparent::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 6px;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  transition-property: opacity, background-color, transform, box-shadow,
+    border-color;
+  will-change: transform;
+}
+
+.filled-button.transparent::before {
+  background-color: transparent;
+  opacity: 1;
+}
+
+.filled-button.transparent:hover::before {
+  background-color: var(--gray-100);
+}

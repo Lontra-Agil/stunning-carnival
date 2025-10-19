@@ -1,0 +1,64 @@
+flowchart TD
+    classDef publicPage fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef authPage fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef contractorPage fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef developerPage fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef actionPage fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    classDef externalService fill:#f5f5f5,stroke:#616161,stroke-width:2px
+
+    A[Landing / Home Page] --> B[Public Blog]
+    A --> C[Terms of Service]
+    A --> D[Privacy Policy]
+
+    A --> E[Sign Up / Login]
+    E --> E1{Authentication Provider}
+    E1 -->|Google OAuth| E2[Authenticate User]
+    E1 -->|Apple OAuth| E2
+
+    E2 --> F{User Role?}
+
+    subgraph G [Contractor Flow]
+        direction TB
+        F -->|Contractor| G1[Talent Marketplace]
+        G1 --> G2[Browse & Filter:<br/>Developers & Organizations]
+        G2 --> G3[View Profile & Metrics]
+        
+        G3 --> G4[Inspect Repository Analytics]
+        G4 --> G5[Code Quality Metrics]
+        G4 --> G6[Project Performance Metrics]
+        G4 --> G7[Activity Trends]
+        
+        G5 --> G8[Initiate Hire]
+        G6 --> G8
+        G7 --> G8
+        
+        G8 --> G9{ Hire Type? }
+        G9 -->|Developer| G10[Individual Contract]
+        G9 -->|Organization| G11[Team Contract]
+        G10 --> G12[Stripe Checkout]
+        G11 --> G12
+        G12 --> G13[Payment Success]
+    end
+
+    subgraph H [Developer Flow]
+        direction TB
+        F -->|Developer| H1[Developer Dashboard]
+        H1 --> H2[Connect GitHub Account]
+        H2 --> H3[Fetch Unified Repository List<br/>Personal + Organizations]
+        
+        H3 --> H4[Repository Visibility Control]
+        H4 --> H5[Toggle Repository Visibility]
+        H4 --> H6[Auto-discover Linked Projects]
+        H4 --> H7[Calculate Combined Metrics]
+        
+        H5 --> H8[Public Profile Updated]
+        H6 --> H8
+        H7 --> H8
+    end
+
+    %% Apply colors
+    class A,B,C,D publicPage
+    class E,E1,E2,F authPage
+    class G1,G2,G3,G4,G5,G6,G7 contractorPage
+    class H1,H2,H3,H4,H5,H6,H7,H8 developerPage
+    class G8,G9,G10,G11,G12,G13 actionPage
