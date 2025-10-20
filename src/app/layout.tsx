@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Lontra Ágil - Conectando Desenvolvedores e Projetos",
   description:
     "A menor taxa do mercado. Desenvolvedores verificados. Consultoria gratuita. Transforme sua ideia em realidade digital.",
+  icons: {
+    icon: "/lontra-icon.svg",
+  },
 };
 
 export default function RootLayout({
