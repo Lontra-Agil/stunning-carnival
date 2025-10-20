@@ -1,233 +1,65 @@
-"use client";
+import { CheckCircle2, Users, FileText, Shield } from "lucide-react";
 
-import { Card, CardContent } from "@/components/ui/card";
-import {
-	Activity,
-	BarChart3,
-	GitBranch,
-	Search,
-	Shield,
-	Zap,
-} from "lucide-react";
+export default function LandingPageFeatures() {
+  const features = [
+    {
+      icon: CheckCircle2,
+      title: "Menor Taxa do Mercado",
+      description:
+        "Apenas 15% de taxa sobre o projeto. Economize mais e invista no que realmente importa: seu negócio.",
+    },
+    {
+      icon: Users,
+      title: "Desenvolvedores Verificados",
+      description:
+        "Todos os desenvolvedores passam por rigorosa verificação de portfólio e habilidades técnicas antes de serem alocados.",
+    },
+    {
+      icon: FileText,
+      title: "Relatórios Detalhados",
+      description:
+        "Acompanhe o progresso do seu projeto em tempo real com relatórios completos e transparentes sobre cada etapa.",
+    },
+    {
+      icon: Shield,
+      title: "Consultoria Gratuita",
+      description:
+        "Reuniões sem custo com especialistas em arquitetura de software para planejar e estruturar seu projeto corretamente.",
+    },
+  ];
 
-export function LandingPageFeatures() {
-	const features = [
-		{
-			id: "feature-verified-portfolios",
-			icon: GitBranch,
-			title: "Portfólios Verificados",
-			description:
-				"Visualize o histórico real de trabalho dos desenvolvedores através de projetos e código verificados automaticamente.",
-		},
-		{
-			id: "feature-performance-metrics",
-			icon: BarChart3,
-			title: "Métricas de Performance",
-			description:
-				"Avalie desenvolvedores com base em dados reais de produtividade, qualidade de código e cumprimento de prazos.",
-		},
-		{
-			id: "feature-realtime-tracking",
-			icon: Activity,
-			title: "Acompanhamento em Tempo Real",
-			description:
-				"Monitore o progresso do seu projeto com gráficos e métricas atualizadas automaticamente durante toda a execução.",
-		},
-		{
-			id: "feature-total-transparency",
-			icon: Shield,
-			title: "Transparência Total",
-			description:
-				"Todas as informações são baseadas em dados reais e verificáveis, garantindo confiança em cada contratação.",
-		},
-		{
-			id: "feature-smart-search",
-			icon: Search,
-			title: "Busca Inteligente",
-			description:
-				"Encontre desenvolvedores com as habilidades exatas que seu projeto precisa, filtrados por experiência comprovada.",
-		},
-		{
-			id: "feature-agile-connection",
-			icon: Zap,
-			title: "Conexão Ágil",
-			description:
-				"Conecte-se rapidamente com profissionais qualificados e inicie seu projeto com segurança e agilidade.",
-		},
-	];
+  return (
+    <section className="relative z-10 container mx-auto px-4 py-20 md:py-32">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">
+            Por que escolher a Lontra Ágil?
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty">
+            Oferecemos a melhor experiência para transformar sua ideia em um
+            produto digital de sucesso.
+          </p>
+        </div>
 
-	return (
-		<section id="recursos" className="relative bg-background py-24 sm:py-32">
-			<div className="pointer-events-none absolute top-10 left-10 hidden opacity-5 lg:block">
-				<svg
-					width="150"
-					height="150"
-					viewBox="0 0 150 150"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-					aria-hidden="true"
-				>
-					<circle
-						cx="75"
-						cy="75"
-						r="40"
-						stroke="#3B0F0F"
-						strokeWidth="3"
-						fill="none"
-					/>
-					<circle
-						cx="75"
-						cy="75"
-						r="25"
-						stroke="#3B0F0F"
-						strokeWidth="3"
-						fill="none"
-					/>
-					<line
-						x1="75"
-						y1="35"
-						x2="75"
-						y2="20"
-						stroke="#3B0F0F"
-						strokeWidth="4"
-					/>
-					<line
-						x1="75"
-						y1="130"
-						x2="75"
-						y2="115"
-						stroke="#3B0F0F"
-						strokeWidth="4"
-					/>
-					<line
-						x1="35"
-						y1="75"
-						x2="20"
-						y2="75"
-						stroke="#3B0F0F"
-						strokeWidth="4"
-					/>
-					<line
-						x1="130"
-						y1="75"
-						x2="115"
-						y2="75"
-						stroke="#3B0F0F"
-						strokeWidth="4"
-					/>
-					<line
-						x1="48"
-						y1="48"
-						x2="37"
-						y2="37"
-						stroke="#3B0F0F"
-						strokeWidth="4"
-					/>
-					<line
-						x1="102"
-						y1="102"
-						x2="113"
-						y2="113"
-						stroke="#3B0F0F"
-						strokeWidth="4"
-					/>
-					<line
-						x1="102"
-						y1="48"
-						x2="113"
-						y2="37"
-						stroke="#3B0F0F"
-						strokeWidth="4"
-					/>
-					<line
-						x1="48"
-						y1="102"
-						x2="37"
-						y2="113"
-						stroke="#3B0F0F"
-						strokeWidth="4"
-					/>
-				</svg>
-			</div>
-
-			<div className="pointer-events-none absolute right-10 bottom-20 hidden opacity-5 lg:block">
-				<svg
-					width="140"
-					height="100"
-					viewBox="0 0 140 100"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-					aria-hidden="true"
-				>
-					<rect
-						x="5"
-						y="5"
-						width="130"
-						height="90"
-						rx="8"
-						stroke="#4D2626"
-						strokeWidth="3"
-						fill="none"
-					/>
-					<line
-						x1="5"
-						y1="25"
-						x2="135"
-						y2="25"
-						stroke="#4D2626"
-						strokeWidth="2"
-					/>
-					<path
-						d="M20 45L35 55L20 65"
-						stroke="#4D2626"
-						strokeWidth="3"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-					/>
-					<line
-						x1="45"
-						y1="60"
-						x2="80"
-						y2="60"
-						stroke="#4D2626"
-						strokeWidth="3"
-						strokeLinecap="round"
-					/>
-				</svg>
-			</div>
-
-			<div className="mx-auto max-w-7xl px-6 lg:px-8">
-				<div className="mx-auto mb-16 max-w-2xl text-center">
-					<h2 className="text-balance font-bold text-4xl text-foreground tracking-tight sm:text-5xl">
-						Contratação Baseada em Dados Reais
-					</h2>
-					<p className="mt-4 text-pretty text-foreground/60 text-lg leading-relaxed">
-						Chega de contratar no escuro. Veja o histórico real, métricas de
-						performance e acompanhe tudo em tempo real.
-					</p>
-				</div>
-
-				<div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-					{features.map((feature) => (
-						<Card
-							key={feature.id}
-							className="hover:-translate-y-1 border-border/50 bg-card transition-all duration-300 hover:shadow-lg"
-						>
-							<CardContent className="p-8">
-								<div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
-									<feature.icon className="h-7 w-7 text-primary" />
-								</div>
-								<h3 className="mb-3 font-semibold text-foreground text-xl">
-									{feature.title}
-								</h3>
-								<p className="text-foreground/60 text-sm leading-relaxed">
-									{feature.description}
-								</p>
-							</CardContent>
-						</Card>
-					))}
-				</div>
-			</div>
-		</section>
-	);
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-card border border-border rounded-xl p-8 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                <feature.icon className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                {feature.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
