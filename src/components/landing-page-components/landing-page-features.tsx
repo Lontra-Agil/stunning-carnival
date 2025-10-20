@@ -1,6 +1,6 @@
 import { CheckCircle2, Users, FileText, Shield } from "lucide-react";
 
-export default function LandingPageFeatures() {
+export function LandingPageFeatures() {
   const features = [
     {
       icon: CheckCircle2,

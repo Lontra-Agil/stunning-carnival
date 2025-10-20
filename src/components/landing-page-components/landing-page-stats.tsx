@@ -1,4 +1,4 @@
-export default function LandingPageStats() {
+export function LandingPageStats() {
   const stats = [
     {
       value: "500+",

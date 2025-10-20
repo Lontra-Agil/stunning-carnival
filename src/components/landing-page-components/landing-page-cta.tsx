@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
-export default function LandingPageCTA() {
+export function LandingPageCTA() {
   const router = useRouter();
 
   return (

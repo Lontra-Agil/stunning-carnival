@@ -1,6 +1,6 @@
 import { Search, MessageSquare, Code, Rocket } from "lucide-react"
 
-export default function LandingPageHowItWorks() {
+export function LandingPageHowItWorks() {
   const steps = [
     {
       icon: Search,

@@ -1,11 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
-import Hero from "@/components/landing-page-components/landing-page-hero";
-import Features from "@/components/landing-page-components/landing-page-features";
-import HowItWorks from "@/components/landing-page-components/landing-page-how-it-works";
-import Stats from "@/components/landing-page-components/lading-page-stats";
-import CTA from "@/components/landing-page-components/landing-page-cta";
 import Image from "next/image";
+import { LandingPageHero } from "@/components/landing-page-components/landing-page-hero";
+import { LandingPageStats } from "@/components/landing-page-components/landing-page-stats";
+import { LandingPageCTA } from "@/components/landing-page-components/landing-page-cta";
+import { LandingPageFeatures } from "@/components/landing-page-components/landing-page-features";
+import { LandingPageHowItWorks } from "@/components/landing-page-components/landing-page-how-it-works";
 
 export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -240,21 +240,21 @@ export default function LandingPage() {
         </div>
       )}
 
-      <Hero />
+      <LandingPageHero />
 
       <div id="features">
-        <Features />
+        <LandingPageFeatures />
       </div>
 
       <div id="how-it-works">
-        <HowItWorks />
+        <LandingPageHowItWorks />
       </div>
 
       <div id="stats">
-        <Stats />
+        <LandingPageStats />
       </div>
 
-      <CTA />
+      <LandingPageCTA />
 
       <footer className="border-t border-border bg-card">
         <div className="container mx-auto px-4 py-12">
