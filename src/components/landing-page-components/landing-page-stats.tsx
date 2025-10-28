@@ -1,34 +1,59 @@
-"use client";
-
-import { Card } from "@/components/ui/card";
-
 export function LandingPageStats() {
-	const stats = [
-		{ id: "stat-developers", value: "10k+", label: "Desenvolvedores Ativos" },
-		{ id: "stat-satisfaction", value: "98%", label: "Taxa de Satisfação" },
-		{ id: "stat-projects", value: "500+", label: "Projetos por Mês" },
-		{ id: "stat-response-time", value: "24h", label: "Tempo de Resposta" },
-	];
+  const stats = [
+    {
+      value: "500+",
+      label: "Projetos concluídos",
+      description: "Entregues com sucesso",
+    },
+    {
+      value: "98%",
+      label: "Satisfação",
+      description: "Clientes satisfeitos",
+    },
+    {
+      value: "200+",
+      label: "Desenvolvedores",
+      description: "Verificados e qualificados",
+    },
+    {
+      value: "15%",
+      label: "Taxa",
+      description: "A menor do mercado",
+    },
+  ];
 
-	return (
-		<section className="bg-card py-20">
-			<div className="mx-auto max-w-7xl px-6 lg:px-8">
-				<div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
-					{stats.map((stat) => (
-						<Card
-							key={stat.id}
-							className="flex flex-col items-center justify-center border-border/50 bg-background/50 p-8 backdrop-blur-sm transition-shadow hover:shadow-md"
-						>
-							<div className="font-bold text-4xl text-primary sm:text-5xl">
-								{stat.value}
-							</div>
-							<div className="mt-2 text-center text-foreground/60 text-sm leading-relaxed">
-								{stat.label}
-							</div>
-						</Card>
-					))}
-				</div>
-			</div>
-		</section>
-	);
+  return (
+    <section className="relative z-10 container mx-auto px-4 py-20 md:py-32">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">
+            Números que impressionam
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty">
+            Resultados comprovados que demonstram nossa excelência e
+            compromisso.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="bg-card border border-border rounded-xl p-8 text-center space-y-2"
+            >
+              <div className="text-5xl md:text-6xl font-bold text-primary">
+                {stat.value}
+              </div>
+              <div className="text-lg font-semibold text-foreground">
+                {stat.label}
+              </div>
+              <div className="text-sm text-muted-foreground">
+                {stat.description}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
