@@ -127,6 +127,9 @@
   - envia formulário de detalhes da implementação de instruções para validar a entrega
 
 ### Use Case 14 - reconhecimento do usuário (dev ou contractor)
+  - A gente faz uma validação da mensagem inicial vinda do wa.me se contém os dados necessários para reconhecimento do usuário
+  - Se não tiver resolvemos por meio de outro fluxo
+
 ### Use Case 15 - prover informações ao usuário
 ### Use Case 16 - prevenção de abuso da AI para propósitos externos à plataforma
   - recusar qualquer diálogo sem consumir tokens excessivos
