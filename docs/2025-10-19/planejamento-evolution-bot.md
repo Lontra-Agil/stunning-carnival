@@ -20,8 +20,8 @@
 2. Conversa com desenvolvedor
   - cadastrar desenvolvedor
   - editar desenvolvedor
-  - entregar pedidos ao desenvolvedor
-  - receber ofertas
+  - listar pedidos ao desenvolvedor
+  - receber ofertas do desenvolvedor
   - notifica pagamento ao desenvolvedor
   - recebe solicitação da entrega parcial do desenvolvedor:
     - envia formulário de detalhes da implementação de instruções para validar a entrega
@@ -39,10 +39,13 @@
   - conferências em video chamada de representantes do lontra ágil perante contrantes e desenvolvedores
   - backup dos repositorios
 
-### Use Case - Recebimento de pedido feito pelo contratante
+## Use cases entre o agente de AI e o Contratante
 
+### Use Case 1 - Fase 1 - Recebimento de pedido feito pelo contratante
+
+- vamos ter salvo no banco de dados o numero do usuário e o tipo de usuário (contratante ou desenvolvedor), sempre que ele refizer o fluxo de entrada soberescrevemos o dados e o tipo de usuário
 - O contratante e o lontra ágil vão manter um diálogo para construir a ideia de projeto juntos
-- Assim que o contratante e o lontra ágil decidem que o projeto estão quase pronto, o lontra ágil diz que vai analisar melhor por 3 dias (implementamos o human in the loop):
+- Assim que o contratante e o lontra ágil decidem que o projeto está quase pronto, o lontra ágil diz que vai analisar melhor por 3 dias (implementamos o human in the loop):
   1. Fluxo de confirmação por documento consolidado
     - um representante do lontra ágil analisa o projeto e aprova um documento detalhado do projeto
     - o projeto consolidado é enviado de volta ao contratate para confirmação
@@ -51,55 +54,82 @@
     - ele aprova um documento detalhado do projeto
 - Um documento de projeto consolidado é gerado ao final do fluxo
 
-### Use Case - Oferecimento de pedidos ao desenvolvedor
+### Use Case 2 - envia proposta ao contratante
+  - se receber aceite de proposta envia link de pagamento ao contratante
+### Use Case 3 - envia entrega parcial
+  - se receber aceite da entrega envia link de pagamento ao contratante
+  - se hover recusa, envia formulário de solictação de questonamentos
+### Use Case 4 - cancelamento de contrato
+### Use Case 5 - reativação de contrato
+### Use Case 6 - solicita feedback
+  - envia formulário de avaliação do projeto
 
-- O desenvolvedor começa um diálogo e pergunta por pedidos
-- O Agente tem o conhecimento do desenvolvedor com quem ele fala, pois o cadastro e o reconhecimento já foi feito, e ele sabe que tipos de requisitos o desenvolvedor consegue lidar
-- O Agente consegue pré-selecionar projeto e oferecer
-- O Agente manda uma unica mensagem com nome e descrições breves de cada projeto
+## Use cases entre o agente de AI e o Desenvolvedor
 
-```
-[
-    Estes são os projetos que eu acredito que voce vai gostar:
+### Use Case 7 - Listagem de pedidos ao desenvolvedor
+  - O desenvolvedor começa um diálogo e pergunta por pedidos
+  - O Agente tem o conhecimento do desenvolvedor com quem ele fala, pois o cadastro e o reconhecimento já foi feito, e ele sabe que tipos de requisitos o desenvolvedor consegue lidar
+  - O Agente consegue pré-selecionar projeto e oferecer
+  - O Agente manda uma unica mensagem com nome e descrições breves de cada projeto
+  ```
+  [
+      Estes são os projetos que eu acredito que voce vai gostar:
 
-    Mensagem1:
-        {nome do proejto 1}
-        {descrição breve}
-        {budget maximo}
-        [Tec1, Tec2]
-            Ações ráidas:
+      Mensagem1:
+          {nome do proejto 1}
+          {descrição breve}
+          {budget maximo}
+          [Tec1, Tec2]
+              Ações rápidas:
 
-            Mais detalhes: Link do Pdf com detalhes
-            Fazer proposta
+              Mais detalhes: Link do Pdf com detalhes
+              Fazer proposta
 
-    Mensagem2:
-        {nome do proejto 2}
-        {descrição breve}
-        {budget maximo}
-        [Tec1, Tec2]
-            Ações ráidas:
+      Mensagem2:
+          {nome do proejto 2}
+          {descrição breve}
+          {budget maximo}
+          [Tec1, Tec2]
+              Ações rpidas:
 
-            Mais detalhes: Link do Pdf com detalhes
-            Fazer proposta
+              Mais detalhes: Link do Pdf com detalhes
+              Fazer proposta
 
-    {...}
-]
-```
+      {...}
+  ]
+  ```
 
-- O desenvolvedor consegue interagir e pedir mais informações do projeto por link do pdf.
-- Quando o desenvolvedor clicar em Fazer proposta, o agente deve oferecer um formulário a ser preenchido pelo desenvolvedor para oferecer uma proposta.
+### Use Case 8 - provimento de detalhes do projeto
+  - após a listagem dos projetos vamos ter botões de ação rápida
+  - Um deles é o botão do PDF
+  - Assim que o desenvolvedor clicar no botão e vai baixar o pdf.
+  => assegurar que o arquivo do pdf está disponível para o desenvolvedor
 
-```
-type Proposal = {
-    upfrontPaymentValue: number
-    deliverables: Array<{
-        title: string (title)
-        type: enum([MVP, Revision, Release])
-        description: string (text area)
-        value: number (currency)
-    }>
-}
-```
+### Use Case 9 - receber ofertas do desenvolvedor
+  - após a listagem dos projetos vamos ter botões de ação rápida
+  - O botão de Fazer proposta vai redirecionar para um formulário a ser preenchido pelo desenvolvedor para oferecer uma proposta.
+  ```
+  type Proposal = {
+      upfrontPaymentValue: number
+      deliverables: Array<{
+          title: string (title)
+          type: enum([MVP, Revision, Release])
+          description: string (text area)
+          value: number (currency)
+      }>
+  }
+  ```
+
+### Use Case 10 - cadastrar desenvolvedor
+### Use Case 11 - editar desenvolvedor
+### Use Case 12 - notifica pagamento ao desenvolvedor
+### Use Case 13 - recebe solicitação da entrega parcial do desenvolvedor:
+  - envia formulário de detalhes da implementação de instruções para validar a entrega
+
+### Use Case 14 - reconhecimento do usuário (dev ou contractor)
+### Use Case 15 - prover informações ao usuário
+### Use Case 16 - prevenção de abuso da AI para propósitos externos à plataforma
+  - recusar qualquer diálogo sem consumir tokens excessivos
 
 ## Workflows
 
