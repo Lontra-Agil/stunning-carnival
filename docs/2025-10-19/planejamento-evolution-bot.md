@@ -133,6 +133,9 @@
 ### Use Case 15 - prover informações ao usuário
 ### Use Case 16 - prevenção de abuso da AI para propósitos externos à plataforma
   - recusar qualquer diálogo sem consumir tokens excessivos
+### Use Case 17 - Recureperação de conta
+  - precisamos verificar se existe um id no whatsapp que identifica o usuário mesmo depois de trocar a o numero
+  - ou precisamos implementar outros identificadores do usuário como email
 
 ## Workflows
 
