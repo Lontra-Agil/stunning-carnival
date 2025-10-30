@@ -36,9 +36,9 @@ export function LandingPageStats() {
 				</div>
 
 				<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-					{stats.map((stat, index) => (
+					{stats.map((stat) => (
 						<div
-							key={index}
+							key={stat.label}
 							className="space-y-2 rounded-xl border border-border bg-card p-8 text-center"
 						>
 							<div className="font-bold text-5xl text-primary md:text-6xl">

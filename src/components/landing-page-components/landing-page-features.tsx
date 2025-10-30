@@ -42,9 +42,9 @@ export function LandingPageFeatures() {
 				</div>
 
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-					{features.map((feature, index) => (
+					{features.map((feature) => (
 						<div
-							key={index}
+							key={feature.title}
 							className="hover:-translate-y-1 rounded-xl border border-border bg-card p-8 transition-all duration-300 hover:border-primary/50"
 						>
 							<div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">

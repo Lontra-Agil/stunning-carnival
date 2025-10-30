@@ -44,7 +44,7 @@ export function LandingPageHowItWorks() {
 
 					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 						{steps.map((step, index) => (
-							<div key={index} className="relative">
+							<div key={step.title} className="relative">
 								<div className="space-y-4">
 									<div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-xl border-2 border-primary/20 bg-card">
 										<step.icon className="h-8 w-8 text-primary" />

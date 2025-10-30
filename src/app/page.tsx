@@ -92,7 +92,8 @@ export default function LandingPage() {
 				</a>
 
 				<div className="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 font-medium text-muted-foreground text-sm transition duration-200 hover:text-foreground md:flex md:space-x-2">
-					<a
+					<button
+						type="button"
 						className="relative cursor-pointer px-4 py-2 text-muted-foreground transition-colors hover:text-foreground"
 						onClick={(e) => {
 							e.preventDefault();
@@ -111,8 +112,9 @@ export default function LandingPage() {
 						}}
 					>
 						<span className="relative z-20">Recursos</span>
-					</a>
-					<a
+					</button>
+					<button
+						type="button"
 						className="relative cursor-pointer px-4 py-2 text-muted-foreground transition-colors hover:text-foreground"
 						onClick={(e) => {
 							e.preventDefault();
@@ -131,8 +133,9 @@ export default function LandingPage() {
 						}}
 					>
 						<span className="relative z-20">Como Funciona</span>
-					</a>
-					<a
+					</button>
+					<button
+						type="button"
 						className="relative cursor-pointer px-4 py-2 text-muted-foreground transition-colors hover:text-foreground"
 						onClick={(e) => {
 							e.preventDefault();
@@ -151,7 +154,7 @@ export default function LandingPage() {
 						}}
 					>
 						<span className="relative z-20">Estatísticas</span>
-					</a>
+					</button>
 				</div>
 
 				<div
@@ -180,6 +183,7 @@ export default function LandingPage() {
 				</a>
 
 				<button
+					type="button"
 					onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 					className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-secondary transition-colors hover:bg-accent"
 					aria-label="Toggle menu"
@@ -210,18 +214,21 @@ export default function LandingPage() {
 					<div className="absolute top-20 right-4 left-4 rounded-2xl border border-border bg-card/95 p-6 shadow-2xl backdrop-blur-md">
 						<nav className="flex flex-col space-y-4">
 							<button
+								type="button"
 								onClick={() => handleMobileNavClick("features")}
 								className="rounded-lg px-4 py-3 text-left font-medium text-lg text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
 							>
 								Recursos
 							</button>
 							<button
+								type="button"
 								onClick={() => handleMobileNavClick("how-it-works")}
 								className="rounded-lg px-4 py-3 text-left font-medium text-lg text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
 							>
 								Como Funciona
 							</button>
 							<button
+								type="button"
 								onClick={() => handleMobileNavClick("stats")}
 								className="rounded-lg px-4 py-3 text-left font-medium text-lg text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
 							>
