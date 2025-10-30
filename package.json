@@ -16,7 +16,7 @@
 		"postinstall": "prisma generate",
 		"preview": "next build && next start",
 		"start": "next start",
-		"test": "dotenv -e .env.test -- vitest run .",
+		"test": "dotenv -e .env.test -e .env -- vitest run --",
 		"typecheck:tsc": "tsc --noEmit",
 		"typecheck:biome": "biome check --write --unsafe",
 		"typecheck": "npm run build; npm run typecheck:tsc; npm run typecheck:biome",
