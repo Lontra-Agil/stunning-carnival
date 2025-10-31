@@ -1,5 +1,6 @@
 import { Agent } from "@mastra/core/agent";
 import { testMcpClient } from "../mcp/test-client";
+import { models } from "../models";
 import { weatherTool } from "../tools/weather-tool";
 
 export const weatherAgent = new Agent({
@@ -16,7 +17,7 @@ export const weatherAgent = new Agent({
  
       Use the weatherTool to fetch current weather data.
 `,
-	model: "google/gemini-2.5-flash-lite",
+	model: models.TALKING_MODEL,
 	description: "Agent that gets the current weather for a location",
 	tools: { weatherTool, ...(await testMcpClient.getTools()) },
 });

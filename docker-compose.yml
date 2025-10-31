@@ -5,14 +5,14 @@ services:
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: savoir-link
+      POSTGRES_DB: lontra-agil
     ports:
       - "127.0.0.1:5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U user -d savoir-link"]
+      test: ["CMD-SHELL", "pg_isready -U user -d lontra-agil"]
       interval: 5s
       timeout: 5s
       retries: 5
