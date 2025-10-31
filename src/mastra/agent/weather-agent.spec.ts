@@ -9,7 +9,8 @@ describe("weather agent", () => {
 			throw new Error("Expected error not to be thrown");
 		}
 
-		console.log(response.text);
+		console.log("answer:", response.text);
+		console.log("totalUsage", response.totalUsage);
 
 		expect(response.text).toBeDefined();
 	});
