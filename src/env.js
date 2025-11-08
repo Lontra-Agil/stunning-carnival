@@ -15,6 +15,10 @@ export const env = createEnv({
 			.default("development"),
 
 		GOOGLE_GENERATIVE_AI_API_KEY: z.string(),
+
+		EVOLUTION_API_URL: z.string(),
+		EVOLUTION_API_KEY: z.string(),
+		EVOLUTION_INSTANCE_NAME: z.string(),
 	},
 
 	/**
@@ -40,6 +44,9 @@ export const env = createEnv({
 		CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
 
 		GOOGLE_GENERATIVE_AI_API_KEY: process.env.GOOGLE_GENERATIVE_AI_API_KEY,
+		EVOLUTION_API_URL: process.env.EVOLUTION_API_URL,
+		EVOLUTION_API_KEY: process.env.EVOLUTION_API_KEY,
+		EVOLUTION_INSTANCE_NAME: process.env.EVOLUTION_INSTANCE_NAME,
 	},
 	/**
 	 * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
