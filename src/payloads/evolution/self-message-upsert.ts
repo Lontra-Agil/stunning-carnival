@@ -1,0 +1,25 @@
+export const evolutionSelfMessageUpsert = {
+	event: "messages.upsert",
+	instance: "lontra-agil-gustavo",
+	data: {
+		key: {
+			remoteJid: "120363403732510888@g.us",
+			fromMe: true,
+			id: "3F4B676173DA9DE986D9",
+			participant: "165678967431247@lid",
+			addressingMode: "lid",
+		},
+		pushName: "Lontra Ágil",
+		status: "SERVER_ACK",
+		message: { conversation: "Olá" },
+		messageType: "conversation",
+		messageTimestamp: 1762632794,
+		instanceId: "4bf6eed0-01db-47fb-a9ba-c053e1fe480a",
+		source: "desktop",
+	},
+	destination: "https://stunning-carnival-puce.vercel.app/api/evolution/",
+	date_time: "2025-11-08T17:13:14.439Z",
+	sender: "5515997296124@s.whatsapp.net",
+	server_url: "http://localhost:8080",
+	apikey: "23C8864B757D-4D98-8D26-0BE7A2234E3E",
+};

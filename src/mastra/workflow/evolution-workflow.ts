@@ -1,3 +1,4 @@
+import { parsedEvolutionMessageSchema } from "@/utils/evolution/parse-evolution-message";
 import { createWorkflow } from "@mastra/core/workflows";
 import z from "zod";
 import {
@@ -5,17 +6,11 @@ import {
 	indentifyUCOutputSchema,
 } from "./14-identify-use-case/indetify-use-case-workflow";
 
-export const evolutionInputSchema = z.object({ message: z.string() });
+export const evolutionInputSchema = parsedEvolutionMessageSchema;
 export const evolutionOutputSchema = z.object({ foo: z.string() });
 
 export const fooWf = createWorkflow({
 	id: "foo-workflow",
-	inputSchema: indentifyUCOutputSchema,
-	outputSchema: z.object({ foo: z.string() }),
-}).commit();
-
-export const barWf = createWorkflow({
-	id: "bar-workflow",
 	inputSchema: indentifyUCOutputSchema,
 	outputSchema: z.object({ foo: z.string() }),
 }).commit();
@@ -28,6 +23,6 @@ export const evolutionWorkflow = createWorkflow({
 	.then(identifyUseCaseWorkflow)
 	.branch([
 		[async ({ inputData: { useCase } }) => useCase === "UC1", fooWf],
-		[async ({ inputData: { useCase } }) => useCase === "UC2", barWf],
+		[async ({ inputData: { useCase } }) => useCase === "NONE", fooWf],
 	])
 	.commit();

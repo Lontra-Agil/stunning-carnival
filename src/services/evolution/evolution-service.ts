@@ -1,16 +1,25 @@
 import { env } from "@/env";
+import {
+	type ParsedEvolutionMessage,
+	parsedEvolutionMessageSchema,
+} from "@/utils/evolution/parse-evolution-message";
 import axios from "axios";
+import z from "zod";
 import { LoggerService } from "../logger/LoggerService";
 import type { EvolutionMessage } from "./evolution-message";
+
+const remoteJidSchema = z.string().describe("Whatsapp conversation channel");
 
 /*
     SEND MESSAGES
 */
 
-export interface SendMessageInput {
-	remoteJid: string;
-	text: string;
-}
+export const sendMessageInputSchema = z.object({
+	remoteJid: remoteJidSchema,
+	text: z.string().describe("Message to sent to the conversantion"),
+});
+
+export type SendMessageInput = z.infer<typeof sendMessageInputSchema>;
 
 export interface SendMessageOutput {
 	key: {
@@ -33,14 +42,24 @@ export interface SendMessageOutput {
     GET PREVIOUS MESSAGES
 */
 
-export interface GetPreviousMessagesInput {
-	remoteJid: string;
+export const getPreviousMessagesInputSchema = z.object({
+	remoteJid: remoteJidSchema,
 
-	pagination?: {
-		perPage?: number;
-		page?: number;
-	};
-}
+	pagination: z
+		.object({
+			perPage: z
+				.number()
+				.optional()
+				.describe("Number of messages in the pagination"),
+			page: z.number().optional().describe("page number in pagination"),
+		})
+		.optional()
+		.describe("paginate the get messages in conversation channel"),
+});
+
+export type GetPreviousMessagesInput = z.infer<
+	typeof getPreviousMessagesInputSchema
+>;
 
 export interface GetPreviousMessagesOutput {
 	messages: {
@@ -50,6 +69,21 @@ export interface GetPreviousMessagesOutput {
 		records: Array<EvolutionMessage>;
 	};
 }
+
+export const getPreviousMessagesShortenedOutputSchema = z.object({
+	total: z.number(),
+	pages: z.number(),
+	currentPage: z.number(),
+	records: z.array(parsedEvolutionMessageSchema),
+});
+
+export type GetPreviousMessagesShortenedOutput = z.infer<
+	typeof getPreviousMessagesShortenedOutputSchema
+>;
+
+/*
+	CONSTRUCTOR
+*/
 
 export interface EvolutionServiceConstructorInput {
 	loggerService: LoggerService;
@@ -121,10 +155,37 @@ export class EvolutionService {
 		);
 
 		this.logger.info(
-			"[EVOLUTION SERVICE]: previous messages requested successfully",
+			"[EVOLUTION SERVICE]: previous messages retrieved successfully",
 			response.data.messages,
 		);
 
 		return response.data.messages;
+	}
+
+	async getPreviousMessageShort(
+		input: GetPreviousMessagesInput,
+	): Promise<GetPreviousMessagesShortenedOutput> {
+		this.logger.info("[EVOLUTION SERVICE]: previous messages short requested");
+
+		const messages = await this.getPreviousMessages(input);
+
+		const shortenedMessages: GetPreviousMessagesShortenedOutput = {
+			...messages,
+			records: messages.records.map<ParsedEvolutionMessage>((item) => ({
+				id: item.key.id,
+				fromMe: item.key.fromMe,
+				remoteJid: item.key.remoteJid,
+				author: item.key.participantAlt,
+				message: item.message.conversation,
+				createdAt: new Date(item.messageTimestamp),
+			})),
+		};
+
+		this.logger.info(
+			"[EVOLUTION SERVICE]: previous messages short requested",
+			shortenedMessages,
+		);
+
+		return shortenedMessages;
 	}
 }
