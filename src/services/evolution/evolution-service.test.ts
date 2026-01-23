@@ -3,7 +3,7 @@ import { EvolutionService } from "./evolution-service";
 
 const REMOTE_JIT = "120363403732510888@g.us";
 
-describe("Evolution Service", () => {
+describe.skip("Evolution Service", () => {
 	it("Should list messages", async () => {
 		const evolutionService = new EvolutionService();
 

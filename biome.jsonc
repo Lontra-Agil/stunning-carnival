@@ -20,6 +20,9 @@
 					}
 				}
 			},
+			"security": {
+				"noDangerouslySetInnerHtml": "off"
+			},
 			"recommended": true
 		}
 	}

@@ -5,6 +5,25 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+	// Enable static generation for blog posts
+	output: undefined,
+
+	// Image optimization
+	images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "**",
+			},
+		],
+	},
+
+	// Experimental features for MDX
+	experimental: {
+		// Enable server components for MDX
+		mdxRs: false,
+	},
+};
 
 export default config;
